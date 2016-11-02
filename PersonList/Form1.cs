@@ -69,5 +69,15 @@ namespace PersonList
         {
             SearchTextBox.Clear();
         }
+
+        private void NewPersonTab_Enter(object sender, EventArgs e)
+        {
+            FirstNameTextBox.Select();
+        }
+
+        private void SearchTab_Enter(object sender, EventArgs e)
+        {
+            SearchTextBox.Select();
+        }
     }
 }

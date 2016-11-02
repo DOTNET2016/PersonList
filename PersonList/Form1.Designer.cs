@@ -140,6 +140,7 @@
             this.NewPersonTab.Size = new System.Drawing.Size(414, 147);
             this.NewPersonTab.TabIndex = 0;
             this.NewPersonTab.Text = "New person";
+            this.NewPersonTab.Enter += new System.EventHandler(this.NewPersonTab_Enter);
             // 
             // AddButton
             // 
@@ -196,6 +197,7 @@
             this.SearchTab.Size = new System.Drawing.Size(414, 147);
             this.SearchTab.TabIndex = 1;
             this.SearchTab.Text = "Search";
+            this.SearchTab.Enter += new System.EventHandler(this.SearchTab_Enter);
             // 
             // FirstOrLastNameLabel
             // 
