@@ -29,6 +29,14 @@ namespace PersonList
 
         }
 
+        private void FirstNameTextBox_Enter(object sender, EventArgs e)
+        {
+            FirstNameTextBox.Clear();
+        }
 
+        private void LastNameTextBox_Enter(object sender, EventArgs e)
+        {
+            LastNameTextBox.Clear();
+        }
     }
 }
