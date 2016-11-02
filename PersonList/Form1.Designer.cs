@@ -45,6 +45,7 @@
             this.FirstOrLastNameLabel = new System.Windows.Forms.Label();
             this.SearchTextBox = new System.Windows.Forms.TextBox();
             this.PersonGroupBox = new System.Windows.Forms.GroupBox();
+            this.RemoveAllButton = new System.Windows.Forms.Button();
             this.TabControlWindow.SuspendLayout();
             this.NewPersonTab.SuspendLayout();
             this.SearchTab.SuspendLayout();
@@ -91,7 +92,7 @@
             this.SortButton.Cursor = System.Windows.Forms.Cursors.Hand;
             this.SortButton.Location = new System.Drawing.Point(47, 557);
             this.SortButton.Name = "SortButton";
-            this.SortButton.Size = new System.Drawing.Size(75, 25);
+            this.SortButton.Size = new System.Drawing.Size(70, 25);
             this.SortButton.TabIndex = 8;
             this.SortButton.Text = "Sort";
             this.SortButton.UseVisualStyleBackColor = true;
@@ -99,9 +100,9 @@
             // MergeButton
             // 
             this.MergeButton.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.MergeButton.Location = new System.Drawing.Point(184, 557);
+            this.MergeButton.Location = new System.Drawing.Point(127, 557);
             this.MergeButton.Name = "MergeButton";
-            this.MergeButton.Size = new System.Drawing.Size(75, 25);
+            this.MergeButton.Size = new System.Drawing.Size(70, 25);
             this.MergeButton.TabIndex = 7;
             this.MergeButton.Text = "Merge";
             this.MergeButton.UseVisualStyleBackColor = true;
@@ -109,9 +110,9 @@
             // RemoveButton
             // 
             this.RemoveButton.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.RemoveButton.Location = new System.Drawing.Point(321, 557);
+            this.RemoveButton.Location = new System.Drawing.Point(208, 557);
             this.RemoveButton.Name = "RemoveButton";
-            this.RemoveButton.Size = new System.Drawing.Size(75, 25);
+            this.RemoveButton.Size = new System.Drawing.Size(70, 25);
             this.RemoveButton.TabIndex = 6;
             this.RemoveButton.Text = "Remove";
             this.RemoveButton.UseVisualStyleBackColor = true;
@@ -231,11 +232,22 @@
             this.PersonGroupBox.TabStop = false;
             this.PersonGroupBox.Text = "Persons";
             // 
+            // RemoveAllButton
+            // 
+            this.RemoveAllButton.Location = new System.Drawing.Point(302, 557);
+            this.RemoveAllButton.Name = "RemoveAllButton";
+            this.RemoveAllButton.Size = new System.Drawing.Size(90, 25);
+            this.RemoveAllButton.TabIndex = 9;
+            this.RemoveAllButton.Text = "Remove All";
+            this.RemoveAllButton.UseVisualStyleBackColor = true;
+            this.RemoveAllButton.Click += new System.EventHandler(this.RemoveAllButton_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(120F, 120F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
             this.ClientSize = new System.Drawing.Size(446, 594);
+            this.Controls.Add(this.RemoveAllButton);
             this.Controls.Add(this.TabControlWindow);
             this.Controls.Add(this.RemoveButton);
             this.Controls.Add(this.MergeButton);
@@ -276,6 +288,7 @@
         private System.Windows.Forms.Label FirstOrLastNameLabel;
         private System.Windows.Forms.TextBox SearchTextBox;
         private System.Windows.Forms.GroupBox PersonGroupBox;
+        private System.Windows.Forms.Button RemoveAllButton;
     }
 }
 
