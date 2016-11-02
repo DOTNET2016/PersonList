@@ -35,10 +35,9 @@ namespace PersonList
         {
            
             personList.Add(new Male(FirstNameTextBox.Text, LastNameTextBox.Text));
+            PersonListBox.Items.Clear();
             foreach (var a in personList)
-            {
                 PersonListBox.Items.Add(a);
-            }
         }
         private void FirstNameTextBox_Enter(object sender, EventArgs e)
         {
@@ -60,7 +59,6 @@ namespace PersonList
 
         private void MaleButton_CheckedChanged(object sender, EventArgs e)
         {
-
 
         }
         private void LastNameTextBox_Enter(object sender, EventArgs e)

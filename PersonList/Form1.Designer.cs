@@ -53,7 +53,8 @@
             // 
             // PersonListBox
             // 
-            this.PersonListBox.ColumnWidth = 85;
+            this.PersonListBox.ColumnWidth = 345;
+            this.PersonListBox.Cursor = System.Windows.Forms.Cursors.Arrow;
             this.PersonListBox.FormattingEnabled = true;
             this.PersonListBox.HorizontalScrollbar = true;
             this.PersonListBox.ItemHeight = 16;
@@ -87,6 +88,7 @@
             // 
             // SortButton
             // 
+            this.SortButton.Cursor = System.Windows.Forms.Cursors.Hand;
             this.SortButton.Location = new System.Drawing.Point(47, 557);
             this.SortButton.Name = "SortButton";
             this.SortButton.Size = new System.Drawing.Size(75, 25);
@@ -96,6 +98,7 @@
             // 
             // MergeButton
             // 
+            this.MergeButton.Cursor = System.Windows.Forms.Cursors.Hand;
             this.MergeButton.Location = new System.Drawing.Point(184, 557);
             this.MergeButton.Name = "MergeButton";
             this.MergeButton.Size = new System.Drawing.Size(75, 25);
@@ -105,6 +108,7 @@
             // 
             // RemoveButton
             // 
+            this.RemoveButton.Cursor = System.Windows.Forms.Cursors.Hand;
             this.RemoveButton.Location = new System.Drawing.Point(321, 557);
             this.RemoveButton.Name = "RemoveButton";
             this.RemoveButton.Size = new System.Drawing.Size(75, 25);
@@ -144,6 +148,7 @@
             // 
             // AddButton
             // 
+            this.AddButton.Cursor = System.Windows.Forms.Cursors.Hand;
             this.AddButton.Location = new System.Drawing.Point(305, 59);
             this.AddButton.Name = "AddButton";
             this.AddButton.Size = new System.Drawing.Size(75, 25);
@@ -236,7 +241,7 @@
             this.Controls.Add(this.MergeButton);
             this.Controls.Add(this.SortButton);
             this.Controls.Add(this.PersonGroupBox);
-            this.Cursor = System.Windows.Forms.Cursors.AppStarting;
+            this.Cursor = System.Windows.Forms.Cursors.Default;
             this.MaximizeBox = false;
             this.Name = "Form1";
             this.ShowIcon = false;
