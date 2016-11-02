@@ -12,7 +12,13 @@ namespace PersonList
 {
     public partial class Form1 : Form
     {
-        List<Person> personList = new List<Person>();
+        // Male = Mr
+        // Female (un-married) = Ms
+        // Female (married) = Mrs
+        // Child (girl) = Miss
+        // Child (boy) = Master
+
+
         public Form1()
         {
             InitializeComponent();

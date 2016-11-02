@@ -211,9 +211,9 @@
             // PersonGroupBox
             // 
             this.PersonGroupBox.Controls.Add(this.PersonListBox);
-            this.PersonGroupBox.Location = new System.Drawing.Point(16, 194);
+            this.PersonGroupBox.Location = new System.Drawing.Point(12, 194);
             this.PersonGroupBox.Name = "PersonGroupBox";
-            this.PersonGroupBox.Size = new System.Drawing.Size(414, 333);
+            this.PersonGroupBox.Size = new System.Drawing.Size(420, 333);
             this.PersonGroupBox.TabIndex = 10;
             this.PersonGroupBox.TabStop = false;
             this.PersonGroupBox.Text = "Persons";
