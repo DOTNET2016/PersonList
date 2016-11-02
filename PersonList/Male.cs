@@ -8,10 +8,15 @@ namespace PersonList
 {
     class Male : Person
     {
-        public Male(string _FirstName, string _LastName, string _Title) : base(_FirstName, _LastName, _Title)
+        public Male(string FirstName, string LastName)
+            : base(FirstName, LastName)
         {
 
+        }
 
+        public override string ToString()
+        {
+            return "Mr. " + base.ToString();
         }
     }
 }

@@ -53,7 +53,9 @@
             // 
             // PersonListBox
             // 
+            this.PersonListBox.ColumnWidth = 85;
             this.PersonListBox.FormattingEnabled = true;
+            this.PersonListBox.HorizontalScrollbar = true;
             this.PersonListBox.ItemHeight = 16;
             this.PersonListBox.Location = new System.Drawing.Point(35, 32);
             this.PersonListBox.MultiColumn = true;
@@ -65,7 +67,6 @@
             // MaleButton
             // 
             this.MaleButton.AutoSize = true;
-            this.MaleButton.Checked = true;
             this.MaleButton.Location = new System.Drawing.Point(35, 59);
             this.MaleButton.Name = "MaleButton";
             this.MaleButton.Size = new System.Drawing.Size(59, 21);
@@ -109,6 +110,7 @@
             this.RemoveButton.TabIndex = 4;
             this.RemoveButton.Text = "Remove";
             this.RemoveButton.UseVisualStyleBackColor = true;
+            this.RemoveButton.Click += new System.EventHandler(this.RemoveButton_Click);
             // 
             // TabControlWindow
             // 
@@ -146,6 +148,7 @@
             this.AddButton.TabIndex = 2;
             this.AddButton.Text = "Add";
             this.AddButton.UseVisualStyleBackColor = true;
+            this.AddButton.Click += new System.EventHandler(this.AddButton_Click);
             // 
             // LastNameLabel
             // 
