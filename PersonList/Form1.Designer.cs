@@ -53,7 +53,6 @@
             // 
             // PersonListBox
             // 
-            this.PersonListBox.ColumnWidth = 85;
             this.PersonListBox.FormattingEnabled = true;
             this.PersonListBox.HorizontalScrollbar = true;
             this.PersonListBox.ItemHeight = 16;
