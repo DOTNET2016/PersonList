@@ -8,5 +8,7 @@ namespace PersonList
 {
     public abstract class Person
     {
+        public string Name { get; set; }
+        public string LastName { get; set; }
     }
 }

@@ -51,7 +51,7 @@
             // 
             // listBox1
             // 
-            this.listBox1.FormattingEnabled = true;
+            this.listBox1.ForeColor = System.Drawing.SystemColors.Control;
             this.listBox1.ItemHeight = 16;
             this.listBox1.Location = new System.Drawing.Point(34, 267);
             this.listBox1.MultiColumn = true;
