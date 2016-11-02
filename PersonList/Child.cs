@@ -8,9 +8,10 @@ namespace PersonList
 {
     class Child : Person
     {
-        public Child(string Name, string LastName) 
-            : base(Name, LastName)
+        public Child(string _FirstName, string _LastName) : base(_FirstName, _LastName)
         {
+
+
         }
-    }   
+    }
 }
