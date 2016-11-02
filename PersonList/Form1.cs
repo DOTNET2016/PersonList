@@ -64,5 +64,10 @@ namespace PersonList
         {
             LastNameTextBox.Clear();
         }
+
+        private void SearchTextBox_Enter(object sender, EventArgs e)
+        {
+            SearchTextBox.Clear();
+        }
     }
 }
