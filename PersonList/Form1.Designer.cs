@@ -53,13 +53,15 @@
             // 
             // PersonListBox
             // 
+            this.PersonListBox.ColumnWidth = 345;
+            this.PersonListBox.Cursor = System.Windows.Forms.Cursors.Arrow;
             this.PersonListBox.FormattingEnabled = true;
             this.PersonListBox.HorizontalScrollbar = true;
             this.PersonListBox.ItemHeight = 16;
             this.PersonListBox.Location = new System.Drawing.Point(35, 32);
             this.PersonListBox.MultiColumn = true;
             this.PersonListBox.Name = "PersonListBox";
-            this.PersonListBox.SelectionMode = System.Windows.Forms.SelectionMode.MultiExtended;
+            this.PersonListBox.SelectionMode = System.Windows.Forms.SelectionMode.MultiSimple;
             this.PersonListBox.Size = new System.Drawing.Size(345, 292);
             this.PersonListBox.TabIndex = 5;
             // 
@@ -86,7 +88,8 @@
             // 
             // SortButton
             // 
-            this.SortButton.Location = new System.Drawing.Point(51, 557);
+            this.SortButton.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.SortButton.Location = new System.Drawing.Point(47, 557);
             this.SortButton.Name = "SortButton";
             this.SortButton.Size = new System.Drawing.Size(75, 25);
             this.SortButton.TabIndex = 8;
@@ -95,7 +98,8 @@
             // 
             // MergeButton
             // 
-            this.MergeButton.Location = new System.Drawing.Point(186, 557);
+            this.MergeButton.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.MergeButton.Location = new System.Drawing.Point(184, 557);
             this.MergeButton.Name = "MergeButton";
             this.MergeButton.Size = new System.Drawing.Size(75, 25);
             this.MergeButton.TabIndex = 7;
@@ -104,6 +108,7 @@
             // 
             // RemoveButton
             // 
+            this.RemoveButton.Cursor = System.Windows.Forms.Cursors.Hand;
             this.RemoveButton.Location = new System.Drawing.Point(321, 557);
             this.RemoveButton.Name = "RemoveButton";
             this.RemoveButton.Size = new System.Drawing.Size(75, 25);
@@ -143,6 +148,7 @@
             // 
             // AddButton
             // 
+            this.AddButton.Cursor = System.Windows.Forms.Cursors.Hand;
             this.AddButton.Location = new System.Drawing.Point(305, 59);
             this.AddButton.Name = "AddButton";
             this.AddButton.Size = new System.Drawing.Size(75, 25);
@@ -235,7 +241,7 @@
             this.Controls.Add(this.MergeButton);
             this.Controls.Add(this.SortButton);
             this.Controls.Add(this.PersonGroupBox);
-            this.Cursor = System.Windows.Forms.Cursors.AppStarting;
+            this.Cursor = System.Windows.Forms.Cursors.Default;
             this.MaximizeBox = false;
             this.Name = "Form1";
             this.ShowIcon = false;
