@@ -20,6 +20,7 @@ namespace PersonList
         // Child (boy) = Master
 
         List<Person> personList = new List<Person>();
+        
         public Form1()
         {
             InitializeComponent();
@@ -32,7 +33,7 @@ namespace PersonList
 
         private void AddButton_Click(object sender, EventArgs e)
         {
-
+           
             personList.Add(new Male(FirstNameTextBox.Text, LastNameTextBox.Text));
             foreach (var a in personList)
             {
@@ -47,12 +48,14 @@ namespace PersonList
         private void RemoveButton_Click(object sender, EventArgs e)
         {
             //PersonListBox.SelectionMode = SelectionMode.MultiExtended;
+            //personList.Remove((Person)PersonListBox.SelectedValue);
 
-            for (int i = PersonListBox.SelectedIndices.Count-1; i >= 0; i--)//removes from the list box but not from the actual list!
+            for (int i = (PersonListBox.SelectedIndex - 1); i >= 0; i--)//removes from the list box but not from the actual list!
             {
-                PersonListBox.Items.RemoveAt(PersonListBox.SelectedIndices[i]);
-                          
-            }          
+                //PersonListBox.Items.RemoveAt(PersonListBox.SelectedIndices[i]);
+                PersonListBox.Items.RemoveAt(i);
+            }
+            PersonListBox.ClearSelected();
         }
 
         private void MaleButton_CheckedChanged(object sender, EventArgs e)
