@@ -18,7 +18,7 @@ namespace PersonList
         // Child (girl) = Miss
         // Child (boy) = Master
 
-
+        List<Person> personList = new List<Person>();
         public Form1()
         {
             InitializeComponent();

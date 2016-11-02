@@ -13,12 +13,12 @@ namespace PersonList
 
         public Person(string FirstName, string LastName)//constructor
         {
-            FirstName = _firstName;
-            LastName = _lastName;
+            _firstName = FirstName;
+            _lastName = LastName;
         }
         public override string ToString()
         {
-            return _firstName + _lastName;
+            return _firstName + " " + _lastName;
         }
 
     }
