@@ -29,18 +29,18 @@
         private void InitializeComponent()
         {
             this.listBox1 = new System.Windows.Forms.ListBox();
-            this.radioButton1 = new System.Windows.Forms.RadioButton();
-            this.radioButton2 = new System.Windows.Forms.RadioButton();
+            this.MaleButton = new System.Windows.Forms.RadioButton();
+            this.FemaleButton = new System.Windows.Forms.RadioButton();
             this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
-            this.button4 = new System.Windows.Forms.Button();
+            this.AddButton = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.LastNameTextBox = new System.Windows.Forms.TextBox();
+            this.FirstNameTextBox = new System.Windows.Forms.TextBox();
             this.tabPage2 = new System.Windows.Forms.TabPage();
             this.label3 = new System.Windows.Forms.Label();
             this.textBox3 = new System.Windows.Forms.TextBox();
@@ -53,34 +53,34 @@
             // 
             this.listBox1.ForeColor = System.Drawing.SystemColors.Control;
             this.listBox1.ItemHeight = 16;
-            this.listBox1.Location = new System.Drawing.Point(34, 267);
+            this.listBox1.Location = new System.Drawing.Point(16, 267);
             this.listBox1.MultiColumn = true;
             this.listBox1.Name = "listBox1";
             this.listBox1.SelectionMode = System.Windows.Forms.SelectionMode.MultiExtended;
-            this.listBox1.Size = new System.Drawing.Size(378, 260);
+            this.listBox1.Size = new System.Drawing.Size(414, 260);
             this.listBox1.TabIndex = 0;
             // 
-            // radioButton1
+            // MaleButton
             // 
-            this.radioButton1.AutoSize = true;
-            this.radioButton1.Checked = true;
-            this.radioButton1.Location = new System.Drawing.Point(18, 112);
-            this.radioButton1.Name = "radioButton1";
-            this.radioButton1.Size = new System.Drawing.Size(59, 21);
-            this.radioButton1.TabIndex = 3;
-            this.radioButton1.TabStop = true;
-            this.radioButton1.Text = "Male";
-            this.radioButton1.UseVisualStyleBackColor = true;
+            this.MaleButton.AutoSize = true;
+            this.MaleButton.Checked = true;
+            this.MaleButton.Location = new System.Drawing.Point(18, 112);
+            this.MaleButton.Name = "MaleButton";
+            this.MaleButton.Size = new System.Drawing.Size(59, 21);
+            this.MaleButton.TabIndex = 3;
+            this.MaleButton.TabStop = true;
+            this.MaleButton.Text = "Male";
+            this.MaleButton.UseVisualStyleBackColor = true;
             // 
-            // radioButton2
+            // FemaleButton
             // 
-            this.radioButton2.AutoSize = true;
-            this.radioButton2.Location = new System.Drawing.Point(18, 139);
-            this.radioButton2.Name = "radioButton2";
-            this.radioButton2.Size = new System.Drawing.Size(75, 21);
-            this.radioButton2.TabIndex = 4;
-            this.radioButton2.Text = "Female";
-            this.radioButton2.UseVisualStyleBackColor = true;
+            this.FemaleButton.AutoSize = true;
+            this.FemaleButton.Location = new System.Drawing.Point(18, 139);
+            this.FemaleButton.Name = "FemaleButton";
+            this.FemaleButton.Size = new System.Drawing.Size(75, 21);
+            this.FemaleButton.TabIndex = 4;
+            this.FemaleButton.Text = "Female";
+            this.FemaleButton.UseVisualStyleBackColor = true;
             // 
             // button1
             // 
@@ -123,13 +123,13 @@
             // tabPage1
             // 
             this.tabPage1.BackColor = System.Drawing.SystemColors.Control;
-            this.tabPage1.Controls.Add(this.button4);
+            this.tabPage1.Controls.Add(this.AddButton);
             this.tabPage1.Controls.Add(this.label2);
             this.tabPage1.Controls.Add(this.label1);
-            this.tabPage1.Controls.Add(this.textBox2);
-            this.tabPage1.Controls.Add(this.textBox1);
-            this.tabPage1.Controls.Add(this.radioButton1);
-            this.tabPage1.Controls.Add(this.radioButton2);
+            this.tabPage1.Controls.Add(this.LastNameTextBox);
+            this.tabPage1.Controls.Add(this.FirstNameTextBox);
+            this.tabPage1.Controls.Add(this.MaleButton);
+            this.tabPage1.Controls.Add(this.FemaleButton);
             this.tabPage1.Location = new System.Drawing.Point(4, 28);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
@@ -137,14 +137,14 @@
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "New person";
             // 
-            // button4
+            // AddButton
             // 
-            this.button4.Location = new System.Drawing.Point(321, 77);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(75, 23);
-            this.button4.TabIndex = 9;
-            this.button4.Text = "Add";
-            this.button4.UseVisualStyleBackColor = true;
+            this.AddButton.Location = new System.Drawing.Point(321, 77);
+            this.AddButton.Name = "AddButton";
+            this.AddButton.Size = new System.Drawing.Size(75, 23);
+            this.AddButton.TabIndex = 9;
+            this.AddButton.Text = "Add";
+            this.AddButton.UseVisualStyleBackColor = true;
             // 
             // label2
             // 
@@ -164,19 +164,19 @@
             this.label1.TabIndex = 7;
             this.label1.Text = "First name";
             // 
-            // textBox2
+            // LastNameTextBox
             // 
-            this.textBox2.Location = new System.Drawing.Point(272, 31);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(124, 22);
-            this.textBox2.TabIndex = 6;
+            this.LastNameTextBox.Location = new System.Drawing.Point(272, 31);
+            this.LastNameTextBox.Name = "LastNameTextBox";
+            this.LastNameTextBox.Size = new System.Drawing.Size(124, 22);
+            this.LastNameTextBox.TabIndex = 6;
             // 
-            // textBox1
+            // FirstNameTextBox
             // 
-            this.textBox1.Location = new System.Drawing.Point(18, 31);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(139, 22);
-            this.textBox1.TabIndex = 5;
+            this.FirstNameTextBox.Location = new System.Drawing.Point(18, 31);
+            this.FirstNameTextBox.Name = "FirstNameTextBox";
+            this.FirstNameTextBox.Size = new System.Drawing.Size(139, 22);
+            this.FirstNameTextBox.TabIndex = 5;
             // 
             // tabPage2
             // 
@@ -218,6 +218,7 @@
             this.Controls.Add(this.listBox1);
             this.Name = "Form1";
             this.Text = "Form1";
+            this.Load += new System.EventHandler(this.Form1_Load);
             this.tabControl1.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);
             this.tabPage1.PerformLayout();
@@ -230,17 +231,17 @@
         #endregion
 
         private System.Windows.Forms.ListBox listBox1;
-        private System.Windows.Forms.RadioButton radioButton1;
-        private System.Windows.Forms.RadioButton radioButton2;
+        private System.Windows.Forms.RadioButton MaleButton;
+        private System.Windows.Forms.RadioButton FemaleButton;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.TabControl tabControl1;
         private System.Windows.Forms.TabPage tabPage1;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox LastNameTextBox;
+        private System.Windows.Forms.TextBox FirstNameTextBox;
         private System.Windows.Forms.TabPage tabPage2;
-        private System.Windows.Forms.Button button4;
+        private System.Windows.Forms.Button AddButton;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label3;
