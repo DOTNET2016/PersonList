@@ -33,15 +33,10 @@ namespace PersonList
 
         private void AddButton_Click(object sender, EventArgs e)
         {
-           
             personList.Add(new Male(FirstNameTextBox.Text, LastNameTextBox.Text));
             PersonListBox.Items.Clear();
             foreach (var a in personList)
                 PersonListBox.Items.Add(a);
-        }
-        private void FirstNameTextBox_Enter(object sender, EventArgs e)
-        {
-            FirstNameTextBox.Clear();
         }
 
         private void RemoveButton_Click(object sender, EventArgs e)
@@ -57,10 +52,19 @@ namespace PersonList
             PersonListBox.ClearSelected();
         }
 
-        private void MaleButton_CheckedChanged(object sender, EventArgs e)
+        private void RemoveAllButton_Click(object sender, EventArgs e)
         {
-
+            personList.Clear();
+            PersonListBox.Items.Clear();
         }
+
+        #region textboxClearandSelectonEntry
+
+        private void FirstNameTextBox_Enter(object sender, EventArgs e)
+        {
+            FirstNameTextBox.Clear();
+        }
+
         private void LastNameTextBox_Enter(object sender, EventArgs e)
         {
             LastNameTextBox.Clear();
@@ -80,11 +84,6 @@ namespace PersonList
         {
             SearchTextBox.Select();
         }
-
-        private void RemoveAllButton_Click(object sender, EventArgs e)
-        {
-            personList.Clear();
-            PersonListBox.Items.Clear();
-        }
+        #endregion
     }
 }
