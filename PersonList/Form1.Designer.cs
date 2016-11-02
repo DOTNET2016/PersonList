@@ -59,7 +59,7 @@
             this.PersonListBox.FormattingEnabled = true;
             this.PersonListBox.HorizontalScrollbar = true;
             this.PersonListBox.Location = new System.Drawing.Point(28, 26);
-            this.PersonListBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.PersonListBox.Margin = new System.Windows.Forms.Padding(2);
             this.PersonListBox.MultiColumn = true;
             this.PersonListBox.Name = "PersonListBox";
             this.PersonListBox.SelectionMode = System.Windows.Forms.SelectionMode.MultiSimple;
@@ -71,7 +71,7 @@
             // 
             this.MaleButton.AutoSize = true;
             this.MaleButton.Location = new System.Drawing.Point(28, 47);
-            this.MaleButton.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.MaleButton.Margin = new System.Windows.Forms.Padding(2);
             this.MaleButton.Name = "MaleButton";
             this.MaleButton.Size = new System.Drawing.Size(48, 17);
             this.MaleButton.TabIndex = 2;
@@ -82,7 +82,7 @@
             // 
             this.FemaleButton.AutoSize = true;
             this.FemaleButton.Location = new System.Drawing.Point(28, 69);
-            this.FemaleButton.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.FemaleButton.Margin = new System.Windows.Forms.Padding(2);
             this.FemaleButton.Name = "FemaleButton";
             this.FemaleButton.Size = new System.Drawing.Size(59, 17);
             this.FemaleButton.TabIndex = 3;
@@ -93,7 +93,7 @@
             // 
             this.SortButton.Cursor = System.Windows.Forms.Cursors.Hand;
             this.SortButton.Location = new System.Drawing.Point(38, 446);
-            this.SortButton.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.SortButton.Margin = new System.Windows.Forms.Padding(2);
             this.SortButton.Name = "SortButton";
             this.SortButton.Size = new System.Drawing.Size(56, 20);
             this.SortButton.TabIndex = 8;
@@ -104,7 +104,7 @@
             // 
             this.MergeButton.Cursor = System.Windows.Forms.Cursors.Hand;
             this.MergeButton.Location = new System.Drawing.Point(102, 446);
-            this.MergeButton.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.MergeButton.Margin = new System.Windows.Forms.Padding(2);
             this.MergeButton.Name = "MergeButton";
             this.MergeButton.Size = new System.Drawing.Size(56, 20);
             this.MergeButton.TabIndex = 7;
@@ -115,7 +115,7 @@
             // 
             this.RemoveButton.Cursor = System.Windows.Forms.Cursors.Hand;
             this.RemoveButton.Location = new System.Drawing.Point(166, 446);
-            this.RemoveButton.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.RemoveButton.Margin = new System.Windows.Forms.Padding(2);
             this.RemoveButton.Name = "RemoveButton";
             this.RemoveButton.Size = new System.Drawing.Size(56, 20);
             this.RemoveButton.TabIndex = 6;
@@ -128,7 +128,7 @@
             this.TabControlWindow.Controls.Add(this.NewPersonTab);
             this.TabControlWindow.Controls.Add(this.SearchTab);
             this.TabControlWindow.Location = new System.Drawing.Point(10, 10);
-            this.TabControlWindow.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.TabControlWindow.Margin = new System.Windows.Forms.Padding(2);
             this.TabControlWindow.Name = "TabControlWindow";
             this.TabControlWindow.SelectedIndex = 0;
             this.TabControlWindow.Size = new System.Drawing.Size(338, 141);
@@ -146,9 +146,9 @@
             this.NewPersonTab.Controls.Add(this.MaleButton);
             this.NewPersonTab.Controls.Add(this.FemaleButton);
             this.NewPersonTab.Location = new System.Drawing.Point(4, 22);
-            this.NewPersonTab.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.NewPersonTab.Margin = new System.Windows.Forms.Padding(2);
             this.NewPersonTab.Name = "NewPersonTab";
-            this.NewPersonTab.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.NewPersonTab.Padding = new System.Windows.Forms.Padding(2);
             this.NewPersonTab.Size = new System.Drawing.Size(330, 115);
             this.NewPersonTab.TabIndex = 0;
             this.NewPersonTab.Text = "New person";
@@ -158,7 +158,7 @@
             // 
             this.AddButton.Cursor = System.Windows.Forms.Cursors.Hand;
             this.AddButton.Location = new System.Drawing.Point(244, 47);
-            this.AddButton.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.AddButton.Margin = new System.Windows.Forms.Padding(2);
             this.AddButton.Name = "AddButton";
             this.AddButton.Size = new System.Drawing.Size(60, 20);
             this.AddButton.TabIndex = 4;
@@ -189,20 +189,20 @@
             // LastNameTextBox
             // 
             this.LastNameTextBox.Location = new System.Drawing.Point(192, 25);
-            this.LastNameTextBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.LastNameTextBox.Margin = new System.Windows.Forms.Padding(2);
             this.LastNameTextBox.Name = "LastNameTextBox";
             this.LastNameTextBox.Size = new System.Drawing.Size(113, 20);
             this.LastNameTextBox.TabIndex = 1;
-            this.LastNameTextBox.Enter += new System.EventHandler(this.LastNameTextBox_Enter);
+            this.LastNameTextBox.Click += new System.EventHandler(this.LastNameTextBox_Click);
             // 
             // FirstNameTextBox
             // 
             this.FirstNameTextBox.Location = new System.Drawing.Point(28, 25);
-            this.FirstNameTextBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.FirstNameTextBox.Margin = new System.Windows.Forms.Padding(2);
             this.FirstNameTextBox.Name = "FirstNameTextBox";
             this.FirstNameTextBox.Size = new System.Drawing.Size(113, 20);
             this.FirstNameTextBox.TabIndex = 0;
-            this.FirstNameTextBox.Enter += new System.EventHandler(this.FirstNameTextBox_Enter);
+            this.FirstNameTextBox.Click += new System.EventHandler(this.FirstNameTextBox_Click);
             // 
             // SearchTab
             // 
@@ -210,9 +210,9 @@
             this.SearchTab.Controls.Add(this.FirstOrLastNameLabel);
             this.SearchTab.Controls.Add(this.SearchTextBox);
             this.SearchTab.Location = new System.Drawing.Point(4, 22);
-            this.SearchTab.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.SearchTab.Margin = new System.Windows.Forms.Padding(2);
             this.SearchTab.Name = "SearchTab";
-            this.SearchTab.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.SearchTab.Padding = new System.Windows.Forms.Padding(2);
             this.SearchTab.Size = new System.Drawing.Size(330, 115);
             this.SearchTab.TabIndex = 1;
             this.SearchTab.Text = "Search";
@@ -231,19 +231,19 @@
             // SearchTextBox
             // 
             this.SearchTextBox.Location = new System.Drawing.Point(28, 25);
-            this.SearchTextBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.SearchTextBox.Margin = new System.Windows.Forms.Padding(2);
             this.SearchTextBox.Name = "SearchTextBox";
             this.SearchTextBox.Size = new System.Drawing.Size(159, 20);
             this.SearchTextBox.TabIndex = 0;
-            this.SearchTextBox.Enter += new System.EventHandler(this.SearchTextBox_Enter);
+            this.SearchTextBox.Click += new System.EventHandler(this.SearchTextBox_Click);
             // 
             // PersonGroupBox
             // 
             this.PersonGroupBox.Controls.Add(this.PersonListBox);
             this.PersonGroupBox.Location = new System.Drawing.Point(10, 155);
-            this.PersonGroupBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.PersonGroupBox.Margin = new System.Windows.Forms.Padding(2);
             this.PersonGroupBox.Name = "PersonGroupBox";
-            this.PersonGroupBox.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.PersonGroupBox.Padding = new System.Windows.Forms.Padding(2);
             this.PersonGroupBox.Size = new System.Drawing.Size(336, 277);
             this.PersonGroupBox.TabIndex = 1;
             this.PersonGroupBox.TabStop = false;
@@ -252,7 +252,7 @@
             // RemoveAllButton
             // 
             this.RemoveAllButton.Location = new System.Drawing.Point(242, 446);
-            this.RemoveAllButton.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.RemoveAllButton.Margin = new System.Windows.Forms.Padding(2);
             this.RemoveAllButton.Name = "RemoveAllButton";
             this.RemoveAllButton.Size = new System.Drawing.Size(72, 20);
             this.RemoveAllButton.TabIndex = 9;
@@ -272,7 +272,7 @@
             this.Controls.Add(this.SortButton);
             this.Controls.Add(this.PersonGroupBox);
             this.Cursor = System.Windows.Forms.Cursors.Default;
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.MaximizeBox = false;
             this.Name = "Form1";
             this.ShowIcon = false;

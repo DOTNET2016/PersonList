@@ -38,7 +38,7 @@ namespace PersonList
                 personList.Add(new Female(FirstNameTextBox.Text, LastNameTextBox.Text, ""));
             if (MaleButton.Checked)
                 personList.Add(new Male(FirstNameTextBox.Text, LastNameTextBox.Text, ""));
-
+          
             PersonListBox.Items.Clear();
 
             foreach (var a in personList)
@@ -52,7 +52,6 @@ namespace PersonList
         {
             //PersonListBox.SelectionMode = SelectionMode.MultiExtended;
             //personList.Remove((Person)PersonListBox.SelectedValue);
-
             //Todo: make it also remove from the <Person> List
             for (int i = PersonListBox.SelectedIndices.Count - 1; i >= 0; i--)
             {
@@ -73,18 +72,18 @@ namespace PersonList
         }
 
         #region textboxClearandSelectonEntry
-
-        private void FirstNameTextBox_Enter(object sender, EventArgs e)
+        //lets discuss how these button clearing should work
+        private void FirstNameTextBox_Click(object sender, EventArgs e)
         {
             FirstNameTextBox.Clear();
         }
 
-        private void LastNameTextBox_Enter(object sender, EventArgs e)
+        private void LastNameTextBox_Click(object sender, EventArgs e)
         {
             LastNameTextBox.Clear();
         }
 
-        private void SearchTextBox_Enter(object sender, EventArgs e)
+        private void SearchTextBox_Click(object sender, EventArgs e)
         {
             SearchTextBox.Clear();
         }
