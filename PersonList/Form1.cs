@@ -12,7 +12,7 @@ namespace PersonList
 {
     public partial class Form1 : Form
     {
-        
+
         // Male = Mr
         // Female (un-married) = Ms
         // Female (married) = Mrs
@@ -20,7 +20,7 @@ namespace PersonList
         // Child (boy) = Master
 
         List<Person> personList = new List<Person>();
-        
+
         public Form1()
         {
             InitializeComponent();
