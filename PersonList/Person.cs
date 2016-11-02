@@ -8,14 +8,17 @@ namespace PersonList
 {
     public abstract class Person
     {
-        public string _firstName { get; set; }
-        public string _lastName { get; set; }
+
+        private string _firstName { get; set; }
+        private string _lastName { get; set; }
+        private string _title { get; set; }
 
         public Person(string FirstName, string LastName)//constructor
         {
             _firstName = FirstName;
             _lastName = LastName;
         }
+
         public override string ToString()
         {
             return _firstName + " " + _lastName;

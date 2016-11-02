@@ -11,6 +11,7 @@ namespace PersonList
         public Male(string FirstName, string LastName)
             : base(FirstName, LastName)
         {
+
         }
 
         public override string ToString()

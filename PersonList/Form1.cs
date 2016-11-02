@@ -12,6 +12,7 @@ namespace PersonList
 {
     public partial class Form1 : Form
     {
+        
         // Male = Mr
         // Female (un-married) = Ms
         // Female (married) = Mrs
@@ -37,6 +38,18 @@ namespace PersonList
             {
                 PersonListBox.Items.Add(a);
             }
+        }
+
+        private void RemoveButton_Click(object sender, EventArgs e)
+        {
+            //PersonListBox.SelectionMode = SelectionMode.MultiExtended;
+
+            for (int i = PersonListBox.SelectedIndices.Count-1; i >= 0; i--)//removes from the list box but not from the actual list!
+            {
+                PersonListBox.Items.RemoveAt(PersonListBox.SelectedIndices[i]);
+               
+            }
+           
         }
     }
 }
