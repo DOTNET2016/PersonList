@@ -10,25 +10,11 @@ using System.Windows.Forms;
 
 namespace PersonList
 {
-    public partial class Form1 : Form
+    public partial class Ned : Form
     {
-        // Male = Mr
-        // Female (un-married) = Ms
-        // Female (married) = Mrs
-        // Child (girl) = Miss
-        // Child (boy) = Master
-
-
-        public Form1()
+        public Ned()
         {
             InitializeComponent();
         }
-
-        private void Form1_Load(object sender, EventArgs e)
-        {
-
-        }
-
-
     }
 }

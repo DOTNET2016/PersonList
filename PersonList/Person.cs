@@ -10,8 +10,9 @@ namespace PersonList
     {
         public string FirstName { get; set; }
         public string LastName { get; set; }
+        public string Title { get; set; }
 
-        public Person(string _FirstName, string _LastName)//constructor
+        public Person(string _FirstName, string _LastName, string _Title)//constructor
         {
             _FirstName = FirstName;
             _LastName = LastName;
