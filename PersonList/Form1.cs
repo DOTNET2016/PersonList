@@ -80,5 +80,11 @@ namespace PersonList
         {
             SearchTextBox.Select();
         }
+
+        private void RemoveAllButton_Click(object sender, EventArgs e)
+        {
+            personList.Clear();
+            PersonListBox.Items.Clear();
+        }
     }
 }
