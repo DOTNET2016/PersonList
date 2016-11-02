@@ -60,7 +60,7 @@
             this.PersonListBox.Location = new System.Drawing.Point(35, 32);
             this.PersonListBox.MultiColumn = true;
             this.PersonListBox.Name = "PersonListBox";
-            this.PersonListBox.SelectionMode = System.Windows.Forms.SelectionMode.MultiExtended;
+            this.PersonListBox.SelectionMode = System.Windows.Forms.SelectionMode.MultiSimple;
             this.PersonListBox.Size = new System.Drawing.Size(345, 292);
             this.PersonListBox.TabIndex = 5;
             // 
