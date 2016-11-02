@@ -10,5 +10,8 @@ namespace PersonList
     {
         public string Name { get; set; }
         public string LastName { get; set; }
+
+        public Person(string Name, string LastName)
+        { }
     }
 }

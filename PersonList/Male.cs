@@ -8,5 +8,9 @@ namespace PersonList
 {
     class Male : Person
     {
+        public Male(string Name, string LastName) 
+            : base(Name, LastName)
+        {
+        }
     }
 }
