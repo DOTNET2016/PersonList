@@ -53,7 +53,9 @@
             // 
             // PersonListBox
             // 
+            this.PersonListBox.ColumnWidth = 85;
             this.PersonListBox.FormattingEnabled = true;
+            this.PersonListBox.HorizontalScrollbar = true;
             this.PersonListBox.ItemHeight = 16;
             this.PersonListBox.Location = new System.Drawing.Point(35, 32);
             this.PersonListBox.MultiColumn = true;
@@ -65,12 +67,10 @@
             // MaleButton
             // 
             this.MaleButton.AutoSize = true;
-            this.MaleButton.Checked = true;
             this.MaleButton.Location = new System.Drawing.Point(35, 59);
             this.MaleButton.Name = "MaleButton";
             this.MaleButton.Size = new System.Drawing.Size(59, 21);
             this.MaleButton.TabIndex = 3;
-            this.MaleButton.TabStop = true;
             this.MaleButton.Text = "Male";
             this.MaleButton.UseVisualStyleBackColor = true;
             // 
