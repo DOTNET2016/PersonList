@@ -15,7 +15,6 @@ namespace PersonList
             : base(FirstName, LastName)
         {
 
-
         }
 
     }
