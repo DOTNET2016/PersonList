@@ -12,8 +12,9 @@ namespace PersonList
         private string _Ms { get; set; }
 
         public Female(string FirstName, string LastName, string Title) 
-            : base(FirstName, LastName)
+            : base(FirstName, LastName, Title)
         {
+            Title = "Ms";
         }
 
         public override string ToString()

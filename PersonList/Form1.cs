@@ -33,20 +33,28 @@ namespace PersonList
 
         private void AddButton_Click(object sender, EventArgs e)
         {
-            personList.Add(new Male(FirstNameTextBox.Text, LastNameTextBox.Text));
+            //now the Add button wont do anything until ether male or female is checked
+            if (FemaleButton.Checked)
+                personList.Add(new Female(FirstNameTextBox.Text, LastNameTextBox.Text, ""));
+            if (MaleButton.Checked)
+                personList.Add(new Male(FirstNameTextBox.Text, LastNameTextBox.Text, ""));
+
             PersonListBox.Items.Clear();
+
             foreach (var a in personList)
                 PersonListBox.Items.Add(a);
 
             RemoveButton.Enabled = true;
         }
 
+        //removes from the list box but not from the actual list!
         private void RemoveButton_Click(object sender, EventArgs e)
         {
             //PersonListBox.SelectionMode = SelectionMode.MultiExtended;
             //personList.Remove((Person)PersonListBox.SelectedValue);
 
-            for (int i = PersonListBox.SelectedIndices.Count - 1; i >= 0; i--)//removes from the list box but not from the actual list!
+            //Todo: make it also remove from the <Person> List
+            for (int i = PersonListBox.SelectedIndices.Count - 1; i >= 0; i--)
             {
                 PersonListBox.Items.RemoveAt(PersonListBox.SelectedIndices[i]);
                 //PersonListBox.Items.RemoveAt(i);
@@ -91,5 +99,10 @@ namespace PersonList
             SearchTextBox.Select();
         }
         #endregion
+
+        private void PersonListBox_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

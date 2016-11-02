@@ -8,6 +8,5 @@ namespace PersonList
 {
     class MissionControl
     {
-        
     }
 }
