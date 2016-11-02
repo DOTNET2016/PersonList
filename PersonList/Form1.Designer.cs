@@ -87,7 +87,7 @@
             // 
             // SortButton
             // 
-            this.SortButton.Location = new System.Drawing.Point(51, 557);
+            this.SortButton.Location = new System.Drawing.Point(47, 557);
             this.SortButton.Name = "SortButton";
             this.SortButton.Size = new System.Drawing.Size(75, 25);
             this.SortButton.TabIndex = 8;
@@ -96,7 +96,7 @@
             // 
             // MergeButton
             // 
-            this.MergeButton.Location = new System.Drawing.Point(186, 557);
+            this.MergeButton.Location = new System.Drawing.Point(184, 557);
             this.MergeButton.Name = "MergeButton";
             this.MergeButton.Size = new System.Drawing.Size(75, 25);
             this.MergeButton.TabIndex = 7;
