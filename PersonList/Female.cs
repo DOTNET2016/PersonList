@@ -14,7 +14,11 @@ namespace PersonList
         public Female(string FirstName, string LastName, string Title) 
             : base(FirstName, LastName)
         {
+        }
 
+        public override string ToString()
+        {
+            return "Ms. " + base.ToString();
         }
 
     }

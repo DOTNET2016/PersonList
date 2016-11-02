@@ -53,24 +53,24 @@
             // 
             // PersonListBox
             // 
+            this.PersonListBox.ColumnWidth = 85;
             this.PersonListBox.FormattingEnabled = true;
+            this.PersonListBox.HorizontalScrollbar = true;
             this.PersonListBox.ItemHeight = 16;
             this.PersonListBox.Location = new System.Drawing.Point(35, 32);
             this.PersonListBox.MultiColumn = true;
             this.PersonListBox.Name = "PersonListBox";
             this.PersonListBox.SelectionMode = System.Windows.Forms.SelectionMode.MultiExtended;
-            this.PersonListBox.Size = new System.Drawing.Size(345, 276);
-            this.PersonListBox.TabIndex = 0;
+            this.PersonListBox.Size = new System.Drawing.Size(345, 292);
+            this.PersonListBox.TabIndex = 3;
             // 
             // MaleButton
             // 
             this.MaleButton.AutoSize = true;
-            this.MaleButton.Checked = true;
             this.MaleButton.Location = new System.Drawing.Point(35, 59);
             this.MaleButton.Name = "MaleButton";
             this.MaleButton.Size = new System.Drawing.Size(59, 21);
-            this.MaleButton.TabIndex = 3;
-            this.MaleButton.TabStop = true;
+            this.MaleButton.TabIndex = 20;
             this.MaleButton.Text = "Male";
             this.MaleButton.UseVisualStyleBackColor = true;
             this.MaleButton.CheckedChanged += new System.EventHandler(this.MaleButton_CheckedChanged);
@@ -81,7 +81,7 @@
             this.FemaleButton.Location = new System.Drawing.Point(35, 86);
             this.FemaleButton.Name = "FemaleButton";
             this.FemaleButton.Size = new System.Drawing.Size(75, 21);
-            this.FemaleButton.TabIndex = 4;
+            this.FemaleButton.TabIndex = 20;
             this.FemaleButton.Text = "Female";
             this.FemaleButton.UseVisualStyleBackColor = true;
             // 
@@ -90,7 +90,7 @@
             this.SortButton.Location = new System.Drawing.Point(51, 557);
             this.SortButton.Name = "SortButton";
             this.SortButton.Size = new System.Drawing.Size(75, 25);
-            this.SortButton.TabIndex = 5;
+            this.SortButton.TabIndex = 6;
             this.SortButton.Text = "Sort";
             this.SortButton.UseVisualStyleBackColor = true;
             // 
@@ -99,7 +99,7 @@
             this.MergeButton.Location = new System.Drawing.Point(186, 557);
             this.MergeButton.Name = "MergeButton";
             this.MergeButton.Size = new System.Drawing.Size(75, 25);
-            this.MergeButton.TabIndex = 6;
+            this.MergeButton.TabIndex = 5;
             this.MergeButton.Text = "Merge";
             this.MergeButton.UseVisualStyleBackColor = true;
             // 
@@ -108,7 +108,7 @@
             this.RemoveButton.Location = new System.Drawing.Point(321, 557);
             this.RemoveButton.Name = "RemoveButton";
             this.RemoveButton.Size = new System.Drawing.Size(75, 25);
-            this.RemoveButton.TabIndex = 7;
+            this.RemoveButton.TabIndex = 4;
             this.RemoveButton.Text = "Remove";
             this.RemoveButton.UseVisualStyleBackColor = true;
             this.RemoveButton.Click += new System.EventHandler(this.RemoveButton_Click);
@@ -121,7 +121,8 @@
             this.TabControlWindow.Name = "TabControlWindow";
             this.TabControlWindow.SelectedIndex = 0;
             this.TabControlWindow.Size = new System.Drawing.Size(422, 176);
-            this.TabControlWindow.TabIndex = 9;
+            this.TabControlWindow.TabIndex = 0;
+            this.TabControlWindow.TabStop = false;
             // 
             // NewPersonTab
             // 
@@ -145,7 +146,7 @@
             this.AddButton.Location = new System.Drawing.Point(305, 59);
             this.AddButton.Name = "AddButton";
             this.AddButton.Size = new System.Drawing.Size(75, 25);
-            this.AddButton.TabIndex = 9;
+            this.AddButton.TabIndex = 2;
             this.AddButton.Text = "Add";
             this.AddButton.UseVisualStyleBackColor = true;
             this.AddButton.Click += new System.EventHandler(this.AddButton_Click);
@@ -173,14 +174,16 @@
             this.LastNameTextBox.Location = new System.Drawing.Point(240, 31);
             this.LastNameTextBox.Name = "LastNameTextBox";
             this.LastNameTextBox.Size = new System.Drawing.Size(140, 22);
-            this.LastNameTextBox.TabIndex = 6;
+            this.LastNameTextBox.TabIndex = 1;
+            this.LastNameTextBox.Enter += new System.EventHandler(this.LastNameTextBox_Enter);
             // 
             // FirstNameTextBox
             // 
             this.FirstNameTextBox.Location = new System.Drawing.Point(35, 31);
             this.FirstNameTextBox.Name = "FirstNameTextBox";
             this.FirstNameTextBox.Size = new System.Drawing.Size(140, 22);
-            this.FirstNameTextBox.TabIndex = 5;
+            this.FirstNameTextBox.TabIndex = 0;
+            this.FirstNameTextBox.Enter += new System.EventHandler(this.FirstNameTextBox_Enter);
             // 
             // SearchTab
             // 
@@ -215,8 +218,8 @@
             this.PersonGroupBox.Controls.Add(this.PersonListBox);
             this.PersonGroupBox.Location = new System.Drawing.Point(12, 194);
             this.PersonGroupBox.Name = "PersonGroupBox";
-            this.PersonGroupBox.Size = new System.Drawing.Size(420, 333);
-            this.PersonGroupBox.TabIndex = 10;
+            this.PersonGroupBox.Size = new System.Drawing.Size(420, 346);
+            this.PersonGroupBox.TabIndex = 1;
             this.PersonGroupBox.TabStop = false;
             this.PersonGroupBox.Text = "Persons";
             // 
@@ -224,14 +227,19 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(120F, 120F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
-            this.ClientSize = new System.Drawing.Size(446, 618);
+            this.ClientSize = new System.Drawing.Size(446, 594);
             this.Controls.Add(this.TabControlWindow);
             this.Controls.Add(this.RemoveButton);
             this.Controls.Add(this.MergeButton);
             this.Controls.Add(this.SortButton);
             this.Controls.Add(this.PersonGroupBox);
+            this.Cursor = System.Windows.Forms.Cursors.AppStarting;
             this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "Form1";
+            this.Opacity = 0.75D;
+            this.ShowIcon = false;
+            this.ShowInTaskbar = false;
             this.Text = "Person list";
             this.TabControlWindow.ResumeLayout(false);
             this.NewPersonTab.ResumeLayout(false);
