@@ -37,6 +37,8 @@ namespace PersonList
             PersonListBox.Items.Clear();
             foreach (var a in personList)
                 PersonListBox.Items.Add(a);
+
+            RemoveButton.Enabled = true;
         }
 
         private void RemoveButton_Click(object sender, EventArgs e)
@@ -48,6 +50,11 @@ namespace PersonList
             {
                 PersonListBox.Items.RemoveAt(PersonListBox.SelectedIndices[i]);
                 //PersonListBox.Items.RemoveAt(i);
+            }
+
+            if (PersonListBox.Items.Count == 0)
+            {
+                RemoveButton.Enabled = false;
             }
         }
 
