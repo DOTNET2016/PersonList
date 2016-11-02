@@ -235,9 +235,7 @@
             this.Controls.Add(this.PersonGroupBox);
             this.Cursor = System.Windows.Forms.Cursors.AppStarting;
             this.MaximizeBox = false;
-            this.MinimizeBox = false;
             this.Name = "Form1";
-            this.Opacity = 0.75D;
             this.ShowIcon = false;
             this.ShowInTaskbar = false;
             this.Text = "Person list";
