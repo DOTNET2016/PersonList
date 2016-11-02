@@ -21,7 +21,7 @@ namespace PersonList
 
         public override string ToString()
         {
-            return _firstName + " " + _lastName;
+            return _title + " " + _firstName + " " + _lastName;
         }
 
     }

@@ -51,9 +51,14 @@ namespace PersonList
             for (int i = PersonListBox.SelectedIndices.Count-1; i >= 0; i--)//removes from the list box but not from the actual list!
             {
                 PersonListBox.Items.RemoveAt(PersonListBox.SelectedIndices[i]);
-               
-            }
-           
+                          
+            }          
+        }
+
+        private void MaleButton_CheckedChanged(object sender, EventArgs e)
+        {
+
+
         }
         private void LastNameTextBox_Enter(object sender, EventArgs e)
         {

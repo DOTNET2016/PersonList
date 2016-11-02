@@ -73,6 +73,7 @@
             this.MaleButton.TabIndex = 2;
             this.MaleButton.Text = "Male";
             this.MaleButton.UseVisualStyleBackColor = true;
+            this.MaleButton.CheckedChanged += new System.EventHandler(this.MaleButton_CheckedChanged);
             // 
             // FemaleButton
             // 
