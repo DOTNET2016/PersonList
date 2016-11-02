@@ -8,7 +8,8 @@ namespace PersonList
 {
     class Child : Person
     {
-        public Child(string _FirstName, string _LastName) : base(_FirstName, _LastName)
+        public Child(string FirstName, string LastName) 
+            : base(FirstName, LastName)
         {
 
 

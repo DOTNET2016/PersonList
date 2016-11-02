@@ -8,7 +8,8 @@ namespace PersonList
 {
     class Female : Person
     {
-        public Female(string _FirstName, string _LastName) : base(_FirstName, _LastName)
+        public Female(string FirstName, string LastName) 
+            : base(FirstName, LastName)
         {
 
 
