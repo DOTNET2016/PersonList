@@ -62,7 +62,7 @@
             this.PersonListBox.Name = "PersonListBox";
             this.PersonListBox.SelectionMode = System.Windows.Forms.SelectionMode.MultiExtended;
             this.PersonListBox.Size = new System.Drawing.Size(345, 292);
-            this.PersonListBox.TabIndex = 3;
+            this.PersonListBox.TabIndex = 5;
             // 
             // MaleButton
             // 
@@ -70,7 +70,7 @@
             this.MaleButton.Location = new System.Drawing.Point(35, 59);
             this.MaleButton.Name = "MaleButton";
             this.MaleButton.Size = new System.Drawing.Size(59, 21);
-            this.MaleButton.TabIndex = 20;
+            this.MaleButton.TabIndex = 2;
             this.MaleButton.Text = "Male";
             this.MaleButton.UseVisualStyleBackColor = true;
             // 
@@ -80,7 +80,7 @@
             this.FemaleButton.Location = new System.Drawing.Point(35, 86);
             this.FemaleButton.Name = "FemaleButton";
             this.FemaleButton.Size = new System.Drawing.Size(75, 21);
-            this.FemaleButton.TabIndex = 20;
+            this.FemaleButton.TabIndex = 3;
             this.FemaleButton.Text = "Female";
             this.FemaleButton.UseVisualStyleBackColor = true;
             // 
@@ -89,7 +89,7 @@
             this.SortButton.Location = new System.Drawing.Point(51, 557);
             this.SortButton.Name = "SortButton";
             this.SortButton.Size = new System.Drawing.Size(75, 25);
-            this.SortButton.TabIndex = 6;
+            this.SortButton.TabIndex = 8;
             this.SortButton.Text = "Sort";
             this.SortButton.UseVisualStyleBackColor = true;
             // 
@@ -98,7 +98,7 @@
             this.MergeButton.Location = new System.Drawing.Point(186, 557);
             this.MergeButton.Name = "MergeButton";
             this.MergeButton.Size = new System.Drawing.Size(75, 25);
-            this.MergeButton.TabIndex = 5;
+            this.MergeButton.TabIndex = 7;
             this.MergeButton.Text = "Merge";
             this.MergeButton.UseVisualStyleBackColor = true;
             // 
@@ -107,7 +107,7 @@
             this.RemoveButton.Location = new System.Drawing.Point(321, 557);
             this.RemoveButton.Name = "RemoveButton";
             this.RemoveButton.Size = new System.Drawing.Size(75, 25);
-            this.RemoveButton.TabIndex = 4;
+            this.RemoveButton.TabIndex = 6;
             this.RemoveButton.Text = "Remove";
             this.RemoveButton.UseVisualStyleBackColor = true;
             this.RemoveButton.Click += new System.EventHandler(this.RemoveButton_Click);
@@ -145,7 +145,7 @@
             this.AddButton.Location = new System.Drawing.Point(305, 59);
             this.AddButton.Name = "AddButton";
             this.AddButton.Size = new System.Drawing.Size(75, 25);
-            this.AddButton.TabIndex = 2;
+            this.AddButton.TabIndex = 4;
             this.AddButton.Text = "Add";
             this.AddButton.UseVisualStyleBackColor = true;
             this.AddButton.Click += new System.EventHandler(this.AddButton_Click);
@@ -211,6 +211,7 @@
             this.SearchTextBox.Name = "SearchTextBox";
             this.SearchTextBox.Size = new System.Drawing.Size(198, 22);
             this.SearchTextBox.TabIndex = 0;
+            this.SearchTextBox.Enter += new System.EventHandler(this.SearchTextBox_Enter);
             // 
             // PersonGroupBox
             // 
