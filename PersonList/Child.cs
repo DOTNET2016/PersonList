@@ -8,17 +8,18 @@ namespace PersonList
 {
     class Child : Person
     {
-        private string _lastName;
+        private Person newChild;
 
-        public Child(string FirstName, string LastName, string Title) 
-            : base(FirstName, LastName, Title)
+        public string ChildName { get; set; }
+        public string ChildFirstName { get; set; }
+        public string ChildLastName { get; set; }
+        public string ChildTitle { get; set; }
+
+        public Child(string FirstName, string LastName) 
+            : base(FirstName, LastName)
         {
 
         }
 
-        public Child(string FirstName, string LastName, string Title, string _lastName) : this(FirstName, LastName, Title)//CONSTRUCTOR TO THE OVERLOAD METHOD IN PERSON CLASS
-        {
-            this._lastName = _lastName;
-        }
     }
 }

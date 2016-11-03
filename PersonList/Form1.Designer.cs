@@ -112,6 +112,7 @@
             this.MergeButton.TabIndex = 5;
             this.MergeButton.Text = "Merge";
             this.MergeButton.UseVisualStyleBackColor = true;
+            this.MergeButton.Click += new System.EventHandler(this.MergeButton_Click);
             // 
             // RemoveButton
             // 

@@ -10,10 +10,11 @@ namespace PersonList
     {
         public string Mr { get; set; }
 
-        public Male(string FirstName, string LastName, string Title)
-            : base(FirstName, LastName, Title)
+        public Male(string FirstName, string LastName)
+            : base(FirstName, LastName)
         {
-            Title = Mr;
+            FirstName = MaleFirstName;
+            LastName = MaleLastName;
         }
 
         public override string ToString()
@@ -21,5 +22,7 @@ namespace PersonList
             Mr = "Mr.";
             return Mr + "  " + base.ToString();
         }
+
+        
     }
 }
