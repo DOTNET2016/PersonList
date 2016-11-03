@@ -238,6 +238,7 @@
             this.SearchTextBox.Size = new System.Drawing.Size(198, 22);
             this.SearchTextBox.TabIndex = 0;
             this.SearchTextBox.Click += new System.EventHandler(this.SearchTextBox_Click);
+            this.SearchTextBox.TextChanged += new System.EventHandler(this.SearchTextBox_TextChanged);
             // 
             // PersonGroupBox
             // 
