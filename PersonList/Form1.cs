@@ -35,13 +35,12 @@ namespace PersonList
 
         private void AddButton_Click(object sender, EventArgs e)
         {
-
+            m1.FirstName = FirstNameTextBox.Text;
+            m1.LastName = LastNameTextBox.Text;
             //now the Add button wont do anything until ether male or female is checked
-            if ((FirstNameTextBox.TextLength == 0) || (LastNameTextBox.TextLength == 0))
-                MessageBox.Show("Please write your name");
-            else if ((FemaleButton.Checked == false) && (MaleButton.Checked == false))
+            if ((FemaleButton.Checked == false) && (MaleButton.Checked == false))
                 MessageBox.Show("Please select either Male or Female");
-            if (FemaleButton.Checked && m1.CheckInput())
+            else if (FemaleButton.Checked && m1.CheckInput())
                 peopleList.Add(new Female(FirstNameTextBox.Text, LastNameTextBox.Text, ""));
             else if (MaleButton.Checked && m1.CheckInput())
                 peopleList.Add(new Male(FirstNameTextBox.Text, LastNameTextBox.Text, ""));
