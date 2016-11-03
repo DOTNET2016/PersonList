@@ -13,11 +13,19 @@ namespace PersonList
         private string _lastName { get; set; }
         private string _title { get; set; }
 
-        public Person(string FirstName, string LastName, string Title)//constructor
+        private static string _childFirstName;
+        private static string _childLastName;
+        private static string _childTitle;
+
+        public string FemaleFirstName { get; set; }
+        public string FemaleLastName { get; set; }
+        public string MaleFirstName { get; set; }
+        public string MaleLastName { get; set; }
+
+        public Person(string FirstName, string LastName)//constructor
         {
             _firstName = FirstName;
             _lastName = LastName;
-            _title = Title;
         }
 
 
@@ -35,10 +43,13 @@ namespace PersonList
             return this._lastName.CompareTo(other._lastName);
         }
 
-        public static Person operator + (Person m1, Person f1)//I THINK THIS IS WRONG BUT SOMETHING TO GO FROM.....
+        public static Person operator +(Person parent1, Person parent2)
         {
-            return new Child(m1._firstName, f1._firstName, m1._lastName, f1._lastName);
-        }
 
+            Child newChild = new Child(_childFirstName, _childLastName);
+            newChild.ChildName = parent2.FemaleFirstName + parent1.MaleLastName;
+
+            return newChild;
+        }
     }
 }

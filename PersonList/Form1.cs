@@ -13,6 +13,9 @@ namespace PersonList
     public partial class Form1 : Form
     {
         MissionControl m1 = new MissionControl();
+        public string ChildFirstName { get; set; }
+        public string ChildLastName { get; set; }
+
         // Male = Mr
         // Female (un-married) = Ms
         // Female (married) = Mrs
@@ -20,7 +23,6 @@ namespace PersonList
         // Child (boy) = Master
 
         List<Person> peopleList = new List<Person>();
-        
 
         public Form1()
         {
@@ -42,13 +44,13 @@ namespace PersonList
                 MessageBox.Show("Please select either Male or Female");
             else if (FemaleButton.Checked && m1.CheckInput())
             {
-                peopleList.Add(new Female(FirstNameTextBox.Text, LastNameTextBox.Text, ""));
+                peopleList.Add(new Female(FirstNameTextBox.Text, LastNameTextBox.Text));
                 RemoveButton.Enabled = true;
                 RemoveAllButton.Enabled = true;
             }
             else if (MaleButton.Checked && m1.CheckInput())
             {
-                peopleList.Add(new Male(FirstNameTextBox.Text, LastNameTextBox.Text, ""));
+                peopleList.Add(new Male(FirstNameTextBox.Text, LastNameTextBox.Text));
                 RemoveButton.Enabled = true;
                 RemoveAllButton.Enabled = true;
             }
@@ -139,5 +141,23 @@ namespace PersonList
         {
 
         }
+
+        private void MergeButton_Click(object sender, EventArgs e)
+        {
+            Male man = new Male(FirstNameTextBox.Text, LastNameTextBox.Text);
+            Female woman = new Female(FirstNameTextBox.Text, LastNameTextBox.Text);
+
+            woman.FemaleFirstName = FirstNameTextBox.Text;
+            man.MaleLastName = LastNameTextBox.Text;
+
+            //Child newChild = new Child(ChildFirstName, ChildLastName);
+
+            var newChild = man + woman;
+            peopleList.Add(new Child(newChild));
+
+                
+        }
+
+        
     }
 }

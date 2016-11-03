@@ -17,6 +17,5 @@ namespace PersonList
                 return false;
             return true;
         }
-
     }
 }
