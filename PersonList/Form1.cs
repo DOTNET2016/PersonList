@@ -41,11 +41,22 @@ namespace PersonList
             if ((FemaleButton.Checked == false) && (MaleButton.Checked == false))
                 MessageBox.Show("Please select either Male or Female");
             else if (FemaleButton.Checked && m1.CheckInput())
+            {
                 peopleList.Add(new Female(FirstNameTextBox.Text, LastNameTextBox.Text, ""));
+                RemoveButton.Enabled = true;
+                RemoveAllButton.Enabled = true;
+            }
             else if (MaleButton.Checked && m1.CheckInput())
+            {
                 peopleList.Add(new Male(FirstNameTextBox.Text, LastNameTextBox.Text, ""));
-            UpdateListBox();
-
+                RemoveButton.Enabled = true;
+                RemoveAllButton.Enabled = true;
+            }
+            else
+            {
+                MessageBox.Show("Please enter a name");
+            }
+            ((CurrencyManager)PersonListBox.BindingContext[peopleList]).Refresh();
             PersonListBox.ClearSelected();
         }
 
