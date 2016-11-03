@@ -84,7 +84,7 @@ namespace PersonList
         }
         private void UpdateButtons()
         {
-            if (PersonListBox.Items.Count == 0)
+            if (peopleList.Count == 0)
             {
                 RemoveButton.Enabled = false;
                 RemoveAllButton.Enabled = false;
