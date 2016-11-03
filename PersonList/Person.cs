@@ -8,6 +8,7 @@ namespace PersonList
 {
     public abstract class Person : IComparable<Person>
     {
+
         private string _firstName { get; set; }
         private string _lastName { get; set; }
         private string _title { get; set; }
@@ -18,6 +19,7 @@ namespace PersonList
             _lastName = LastName;
             _title = Title;
         }
+
 
         public override string ToString()
         {
@@ -32,5 +34,11 @@ namespace PersonList
             }
             return this._lastName.CompareTo(other._lastName);
         }
+
+        public static Person operator + (Person m1, Person f1)
+        {
+            return new Child(m1._firstName, f1._firstName, m1._lastName, f1._lastName);
+        }
+
     }
 }

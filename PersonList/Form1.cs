@@ -92,6 +92,7 @@ namespace PersonList
                 FemaleButton.Checked = false;
                 FirstNameTextBox.Clear();
                 LastNameTextBox.Clear();
+                SearchTextBox.Clear();
             }
             else
             {
