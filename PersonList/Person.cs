@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace PersonList
 {
-    public abstract class Person
+    public abstract class Person : IComparable
     {
 
         private string _firstName { get; set; }
@@ -25,5 +25,9 @@ namespace PersonList
             return _title + " " + _firstName + " " + _lastName;
         }
 
+        public int CompareTo(object obj)
+        {
+            return _firstName.CompareTo(obj);
+        }
     }
 }

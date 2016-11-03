@@ -19,11 +19,13 @@ namespace PersonList
         // Child (girl) = Miss
         // Child (boy) = Master
 
-        List<Person> personList = new List<Person>();
+        List<Person> peopleList = new List<Person>();
+        
 
         public Form1()
         {
             InitializeComponent();
+            
         }
 
         private void Form1_Load(object sender, EventArgs e)
@@ -33,22 +35,31 @@ namespace PersonList
 
         private void AddButton_Click(object sender, EventArgs e)
         {
+
             //now the Add button wont do anything until ether male or female is checked
             if ((FirstNameTextBox.TextLength == 0) || (LastNameTextBox.TextLength == 0))
                 MessageBox.Show("Please write your name");
             else if ((FemaleButton.Checked == false) && (MaleButton.Checked == false))
                 MessageBox.Show("Please select either Male or Female");
             else if (FemaleButton.Checked)
-                personList.Add(new Female(FirstNameTextBox.Text, LastNameTextBox.Text, ""));
+                peopleList.Add(new Female(FirstNameTextBox.Text, LastNameTextBox.Text, ""));
             else if (MaleButton.Checked)
-                personList.Add(new Male(FirstNameTextBox.Text, LastNameTextBox.Text, ""));
+                peopleList.Add(new Male(FirstNameTextBox.Text, LastNameTextBox.Text, ""));
+            UpdateList();
+            //PersonListBox.Items.Clear();
 
-            PersonListBox.Items.Clear();
-
-            foreach (var a in personList)
-                PersonListBox.Items.Add(a);
+            //foreach (var a in peopleList)
+            //    PersonListBox.Items.Add(a);
 
             RemoveButton.Enabled = true;
+        }
+        private void UpdateList()
+        {
+            PersonListBox.DataSource = peopleList;
+
+
+            PersonListBox.Refresh();
+            PersonListBox.Update();
         }
 
         //removes from the list box but not from the actual list!
@@ -57,12 +68,12 @@ namespace PersonList
             //PersonListBox.SelectionMode = SelectionMode.MultiExtended;
             //personList.Remove((Person)PersonListBox.SelectedValue);
             //Todo: make it also remove from the <Person> List
-            for (int i = PersonListBox.SelectedIndices.Count - 1; i >= 0; i--)
-            {
-                PersonListBox.Items.RemoveAt(PersonListBox.SelectedIndices[i]);
-                //PersonListBox.Items.RemoveAt(i);
-            }
-
+            //for (int i = PersonListBox.SelectedIndices.Count - 1; i >= 0; i--)
+            //{
+            //    PersonListBox.Items.RemoveAt(PersonListBox.SelectedIndices[i]);
+            //    //PersonListBox.Items.RemoveAt(i);
+            //}
+            peopleList.Remove((Person)PersonListBox.SelectedValue);
             if (PersonListBox.Items.Count == 0)
             {
                 RemoveButton.Enabled = false;
@@ -71,7 +82,7 @@ namespace PersonList
 
         private void RemoveAllButton_Click(object sender, EventArgs e)
         {
-            personList.Clear();
+            peopleList.Clear();
             PersonListBox.Items.Clear();
         }
 
