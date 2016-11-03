@@ -52,6 +52,10 @@ namespace PersonList
                 RemoveButton.Enabled = true;
                 RemoveAllButton.Enabled = true;
             }
+            else
+            {
+                MessageBox.Show("Please enter a name");
+            }
             ((CurrencyManager)PersonListBox.BindingContext[peopleList]).Refresh();
             PersonListBox.ClearSelected();
         }
