@@ -8,7 +8,6 @@ namespace PersonList
 {
     public abstract class Person : IComparable
     {
-
         private string _firstName { get; set; }
         private string _lastName { get; set; }
         private string _title { get; set; }

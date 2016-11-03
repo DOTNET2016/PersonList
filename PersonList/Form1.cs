@@ -111,5 +111,10 @@ namespace PersonList
             SearchTextBox.Select();
         }
         #endregion
+
+        private void SortButton_Click(object sender, EventArgs e)
+        {
+            
+        }
     }
 }
