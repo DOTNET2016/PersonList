@@ -11,6 +11,7 @@ namespace PersonList
         public Child(string FirstName, string LastName, string Title) 
             : base(FirstName, LastName, Title)
         {
+
         }
     }
 }

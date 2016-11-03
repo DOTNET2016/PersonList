@@ -66,7 +66,6 @@
             this.PersonListBox.SelectionMode = System.Windows.Forms.SelectionMode.MultiSimple;
             this.PersonListBox.Size = new System.Drawing.Size(345, 276);
             this.PersonListBox.TabIndex = 5;
-            this.PersonListBox.SelectedIndexChanged += new System.EventHandler(this.PersonListBox_SelectedIndexChanged);
             // 
             // MaleButton
             // 

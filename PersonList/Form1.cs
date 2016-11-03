@@ -25,7 +25,8 @@ namespace PersonList
         public Form1()
         {
             InitializeComponent();
-            
+            PersonListBox.DataSource = peopleList;//moved it here
+
         }
 
         private void Form1_Load(object sender, EventArgs e)
@@ -42,24 +43,31 @@ namespace PersonList
             else if ((FemaleButton.Checked == false) && (MaleButton.Checked == false))
                 MessageBox.Show("Please select either Male or Female");
             else if (FemaleButton.Checked)
+            {
                 peopleList.Add(new Female(FirstNameTextBox.Text, LastNameTextBox.Text, ""));
+                ((CurrencyManager)PersonListBox.BindingContext[peopleList]).Refresh();//added this
+            }
             else if (MaleButton.Checked)
+            {
                 peopleList.Add(new Male(FirstNameTextBox.Text, LastNameTextBox.Text, ""));
-            UpdateList();
+                ((CurrencyManager)PersonListBox.BindingContext[peopleList]).Refresh();//added this
+            }
+            //UpdateList();
             //PersonListBox.Items.Clear();
 
             //foreach (var a in peopleList)
             //    PersonListBox.Items.Add(a);
+            //UpdateList();
 
             RemoveButton.Enabled = true;
         }
         private void UpdateList()
         {
-            PersonListBox.DataSource = peopleList;
+            //PersonListBox.DataSource = peopleList;
 
-
-            PersonListBox.Refresh();
-            PersonListBox.Update();
+            //((CurrencyManager)PersonListBox.BindingContext[peopleList]).Refresh();
+            //PersonListBox.Refresh();
+            //PersonListBox.Update();
         }
 
         //removes from the list box but not from the actual list!
@@ -114,9 +122,6 @@ namespace PersonList
         }
         #endregion
 
-        private void PersonListBox_SelectedIndexChanged(object sender, EventArgs e)
-        {
 
-        }
     }
 }
