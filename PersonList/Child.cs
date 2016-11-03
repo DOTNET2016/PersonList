@@ -8,7 +8,6 @@ namespace PersonList
 {
     class Child : Person
     {
-        private Person newChild;
 
         public string ChildName { get; set; }
         public string ChildFirstName { get; set; }

@@ -14,8 +14,8 @@ namespace PersonList
         //public string FemaleFirstName { get; set; }
         //public string FemaleLastName { get; set; }
 
-        public Female(string FirstName, string LastName) 
-            : base(FirstName, LastName)
+        public Female(string FemaleFirstName, string FemaleLastName) 
+            : base(FemaleFirstName, FemaleLastName)
         {
             
         }

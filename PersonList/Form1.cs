@@ -144,20 +144,22 @@ namespace PersonList
 
         private void MergeButton_Click(object sender, EventArgs e)
         {
+            //still not working right. We need to assign the male name to a male and female to a female.....
+       
             Male man = new Male(FirstNameTextBox.Text, LastNameTextBox.Text);
             Female woman = new Female(FirstNameTextBox.Text, LastNameTextBox.Text);
+
+            //Male man = new Male(m1.MaleFirstName, m1.MaleLastName);
+            //Female woman = new Female(m1.FemaleFirstName, m1.FemaleLastName);
 
             woman.FemaleFirstName = FirstNameTextBox.Text;
             man.MaleLastName = LastNameTextBox.Text;
 
-            //Child newChild = new Child(ChildFirstName, ChildLastName);
-
             var newChild = man + woman;
-            peopleList.Add(new Child(newChild));
+            peopleList.Add(newChild);
 
-                
-        }
-
-        
+            UpdateListBox();
+            PersonListBox.ClearSelected();           
+        }  
     }
 }
