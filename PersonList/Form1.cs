@@ -45,53 +45,41 @@ namespace PersonList
             else if (FemaleButton.Checked)
             {
                 peopleList.Add(new Female(FirstNameTextBox.Text, LastNameTextBox.Text, ""));
-                ((CurrencyManager)PersonListBox.BindingContext[peopleList]).Refresh();//added this
             }
             else if (MaleButton.Checked)
             {
                 peopleList.Add(new Male(FirstNameTextBox.Text, LastNameTextBox.Text, ""));
-                ((CurrencyManager)PersonListBox.BindingContext[peopleList]).Refresh();//added this
             }
-            //UpdateList();
-            //PersonListBox.Items.Clear();
-
-            //foreach (var a in peopleList)
-            //    PersonListBox.Items.Add(a);
-            //UpdateList();
+            UpdateList();
 
             RemoveButton.Enabled = true;
+            RemoveAllButton.Enabled = true;
+            PersonListBox.ClearSelected();
         }
         private void UpdateList()
         {
-            //PersonListBox.DataSource = peopleList;
-
-            //((CurrencyManager)PersonListBox.BindingContext[peopleList]).Refresh();
-            //PersonListBox.Refresh();
-            //PersonListBox.Update();
+            ((CurrencyManager)PersonListBox.BindingContext[peopleList]).Refresh();
+            if (PersonListBox.Items.Count == 0)
+            {
+                RemoveButton.Enabled = false;
+                RemoveAllButton.Enabled = false;
+            }
         }
 
         //removes from the list box but not from the actual list!
         private void RemoveButton_Click(object sender, EventArgs e)
         {
-            //PersonListBox.SelectionMode = SelectionMode.MultiExtended;
-            //personList.Remove((Person)PersonListBox.SelectedValue);
-            //Todo: make it also remove from the <Person> List
-            //for (int i = PersonListBox.SelectedIndices.Count - 1; i >= 0; i--)
-            //{
-            //    PersonListBox.Items.RemoveAt(PersonListBox.SelectedIndices[i]);
-            //    //PersonListBox.Items.RemoveAt(i);
-            //}
             peopleList.Remove((Person)PersonListBox.SelectedValue);
-            if (PersonListBox.Items.Count == 0)
-            {
-                RemoveButton.Enabled = false;
-            }
+
+            UpdateList();
+            PersonListBox.ClearSelected();
         }
 
         private void RemoveAllButton_Click(object sender, EventArgs e)
         {
             peopleList.Clear();
-            PersonListBox.Items.Clear();
+            UpdateList();
+            PersonListBox.ClearSelected();
         }
 
         #region textboxClearandSelectonEntry

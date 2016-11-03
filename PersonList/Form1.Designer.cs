@@ -114,6 +114,7 @@
             // RemoveButton
             // 
             this.RemoveButton.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.RemoveButton.Enabled = false;
             this.RemoveButton.Location = new System.Drawing.Point(208, 558);
             this.RemoveButton.Margin = new System.Windows.Forms.Padding(2);
             this.RemoveButton.Name = "RemoveButton";
@@ -251,6 +252,7 @@
             // 
             // RemoveAllButton
             // 
+            this.RemoveAllButton.Enabled = false;
             this.RemoveAllButton.Location = new System.Drawing.Point(302, 558);
             this.RemoveAllButton.Margin = new System.Windows.Forms.Padding(2);
             this.RemoveAllButton.Name = "RemoveAllButton";
