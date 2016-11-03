@@ -8,10 +8,17 @@ namespace PersonList
 {
     class Child : Person
     {
+        private string _lastName;
+
         public Child(string FirstName, string LastName, string Title) 
             : base(FirstName, LastName, Title)
         {
 
+        }
+
+        public Child(string FirstName, string LastName, string Title, string _lastName) : this(FirstName, LastName, Title)
+        {
+            this._lastName = _lastName;
         }
     }
 }
