@@ -18,8 +18,8 @@ namespace PersonList
 
         public override string ToString()
         {
-            Mr = "Mr";
-            return Mr + "   " + base.ToString();
+            Mr = "Mr.";
+            return Mr + "  " + base.ToString();
         }
     }
 }
