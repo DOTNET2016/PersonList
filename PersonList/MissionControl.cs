@@ -10,6 +10,7 @@ namespace PersonList
     {
         public string FirstName { get; set; }
         public string LastName { get; set; }
+
         public bool CheckInput()
         {
             if ((FirstName.Length == 0) || (LastName.Length == 0))

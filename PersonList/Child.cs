@@ -16,7 +16,7 @@ namespace PersonList
 
         }
 
-        public Child(string FirstName, string LastName, string Title, string _lastName) : this(FirstName, LastName, Title)
+        public Child(string FirstName, string LastName, string Title, string _lastName) : this(FirstName, LastName, Title)//CONSTRUCTOR TO THE OVERLOAD METHOD IN PERSON CLASS
         {
             this._lastName = _lastName;
         }

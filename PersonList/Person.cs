@@ -35,7 +35,7 @@ namespace PersonList
             return this._lastName.CompareTo(other._lastName);
         }
 
-        public static Person operator + (Person m1, Person f1)
+        public static Person operator + (Person m1, Person f1)//I THINK THIS IS WRONG BUT SOMETHING TO GO FROM.....
         {
             return new Child(m1._firstName, f1._firstName, m1._lastName, f1._lastName);
         }
