@@ -43,13 +43,9 @@ namespace PersonList
             else if ((FemaleButton.Checked == false) && (MaleButton.Checked == false))
                 MessageBox.Show("Please select either Male or Female");
             else if (FemaleButton.Checked)
-            {
                 peopleList.Add(new Female(FirstNameTextBox.Text, LastNameTextBox.Text, ""));
-            }
             else if (MaleButton.Checked)
-            {
                 peopleList.Add(new Male(FirstNameTextBox.Text, LastNameTextBox.Text, ""));
-            }
             UpdateList();
 
             RemoveButton.Enabled = true;
@@ -66,10 +62,10 @@ namespace PersonList
             }
         }
 
-        //removes from the list box but not from the actual list!
         private void RemoveButton_Click(object sender, EventArgs e)
         {
-            peopleList.Remove((Person)PersonListBox.SelectedValue);
+            for (var i = PersonListBox.SelectedIndices.Count - 1; i >= 0; i--)
+                ((CurrencyManager)PersonListBox.BindingContext[peopleList]).RemoveAt(PersonListBox.SelectedIndices[i]);
 
             UpdateList();
             PersonListBox.ClearSelected();
@@ -109,7 +105,5 @@ namespace PersonList
             SearchTextBox.Select();
         }
         #endregion
-
-
     }
 }
