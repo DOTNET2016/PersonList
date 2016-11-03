@@ -8,5 +8,9 @@ namespace PersonList
 {
     class MissionControl
     {
+        public bool CheckInput()
+        {
+            return true;
+        }
     }
 }
