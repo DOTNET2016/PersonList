@@ -75,6 +75,8 @@ namespace PersonList
                 RemoveAllButton.Enabled = false;
                 MaleButton.Checked = false;
                 FemaleButton.Checked = false;
+                FirstNameTextBox.Clear();
+                LastNameTextBox.Clear();
             }
             else
             {
