@@ -79,7 +79,7 @@ namespace PersonList
         private void UpdateListBox()
         {
             ((CurrencyManager)PersonListBox.BindingContext[peopleList]).Refresh();
-            if (PersonListBox.Items.Count == 0)
+            if (peopleList.Count == 0)
             {
                 RemoveButton.Enabled = false;
                 RemoveAllButton.Enabled = false;
@@ -87,6 +87,7 @@ namespace PersonList
                 FemaleButton.Checked = false;
                 FirstNameTextBox.Clear();
                 LastNameTextBox.Clear();
+                SearchTextBox.Clear();
             }
             else
             {
