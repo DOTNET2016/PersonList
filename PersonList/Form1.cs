@@ -56,7 +56,7 @@ namespace PersonList
             {
                 MessageBox.Show("Please enter a name");
             }
-            ((CurrencyManager)PersonListBox.BindingContext[peopleList]).Refresh();
+            UpdateListBox();
             PersonListBox.ClearSelected();
         }
 
@@ -66,6 +66,7 @@ namespace PersonList
                 ((CurrencyManager)PersonListBox.BindingContext[peopleList]).RemoveAt(PersonListBox.SelectedIndices[i]);
 
             UpdateListBox();
+            UpdateButtons();
             PersonListBox.ClearSelected();
         }
 
@@ -73,12 +74,16 @@ namespace PersonList
         {
             peopleList.Clear();
             UpdateListBox();
+            UpdateButtons();
             PersonListBox.ClearSelected();
         }
 
         private void UpdateListBox()
         {
             ((CurrencyManager)PersonListBox.BindingContext[peopleList]).Refresh();
+        }
+        private void UpdateButtons()
+        {
             if (PersonListBox.Items.Count == 0)
             {
                 RemoveButton.Enabled = false;
@@ -127,6 +132,11 @@ namespace PersonList
         {
             peopleList.Sort();
             UpdateListBox();
+        }
+
+        private void SearchTextBox_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }
