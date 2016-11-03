@@ -66,6 +66,7 @@
             this.PersonListBox.SelectionMode = System.Windows.Forms.SelectionMode.MultiSimple;
             this.PersonListBox.Size = new System.Drawing.Size(345, 276);
             this.PersonListBox.TabIndex = 5;
+            this.PersonListBox.TabStop = false;
             // 
             // MaleButton
             // 
@@ -74,7 +75,7 @@
             this.MaleButton.Margin = new System.Windows.Forms.Padding(2);
             this.MaleButton.Name = "MaleButton";
             this.MaleButton.Size = new System.Drawing.Size(59, 21);
-            this.MaleButton.TabIndex = 2;
+            this.MaleButton.TabIndex = 19;
             this.MaleButton.Text = "Male";
             this.MaleButton.UseVisualStyleBackColor = true;
             // 
@@ -85,7 +86,7 @@
             this.FemaleButton.Margin = new System.Windows.Forms.Padding(2);
             this.FemaleButton.Name = "FemaleButton";
             this.FemaleButton.Size = new System.Drawing.Size(75, 21);
-            this.FemaleButton.TabIndex = 3;
+            this.FemaleButton.TabIndex = 20;
             this.FemaleButton.Text = "Female";
             this.FemaleButton.UseVisualStyleBackColor = true;
             // 
@@ -96,7 +97,7 @@
             this.SortButton.Margin = new System.Windows.Forms.Padding(2);
             this.SortButton.Name = "SortButton";
             this.SortButton.Size = new System.Drawing.Size(70, 25);
-            this.SortButton.TabIndex = 8;
+            this.SortButton.TabIndex = 6;
             this.SortButton.Text = "Sort";
             this.SortButton.UseVisualStyleBackColor = true;
             this.SortButton.Click += new System.EventHandler(this.SortButton_Click);
@@ -108,7 +109,7 @@
             this.MergeButton.Margin = new System.Windows.Forms.Padding(2);
             this.MergeButton.Name = "MergeButton";
             this.MergeButton.Size = new System.Drawing.Size(70, 25);
-            this.MergeButton.TabIndex = 7;
+            this.MergeButton.TabIndex = 5;
             this.MergeButton.Text = "Merge";
             this.MergeButton.UseVisualStyleBackColor = true;
             this.MergeButton.Click += new System.EventHandler(this.MergeButton_Click);
@@ -121,7 +122,7 @@
             this.RemoveButton.Margin = new System.Windows.Forms.Padding(2);
             this.RemoveButton.Name = "RemoveButton";
             this.RemoveButton.Size = new System.Drawing.Size(70, 25);
-            this.RemoveButton.TabIndex = 6;
+            this.RemoveButton.TabIndex = 4;
             this.RemoveButton.Text = "Remove";
             this.RemoveButton.UseVisualStyleBackColor = true;
             this.RemoveButton.Click += new System.EventHandler(this.RemoveButton_Click);
@@ -164,7 +165,7 @@
             this.AddButton.Margin = new System.Windows.Forms.Padding(2);
             this.AddButton.Name = "AddButton";
             this.AddButton.Size = new System.Drawing.Size(75, 25);
-            this.AddButton.TabIndex = 4;
+            this.AddButton.TabIndex = 2;
             this.AddButton.Text = "Add";
             this.AddButton.UseVisualStyleBackColor = true;
             this.AddButton.Click += new System.EventHandler(this.AddButton_Click);
@@ -260,7 +261,7 @@
             this.RemoveAllButton.Margin = new System.Windows.Forms.Padding(2);
             this.RemoveAllButton.Name = "RemoveAllButton";
             this.RemoveAllButton.Size = new System.Drawing.Size(90, 25);
-            this.RemoveAllButton.TabIndex = 9;
+            this.RemoveAllButton.TabIndex = 3;
             this.RemoveAllButton.Text = "Remove All";
             this.RemoveAllButton.UseVisualStyleBackColor = true;
             this.RemoveAllButton.Click += new System.EventHandler(this.RemoveAllButton_Click);
