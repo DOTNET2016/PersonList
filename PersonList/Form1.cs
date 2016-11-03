@@ -84,7 +84,7 @@ namespace PersonList
             }
         }
 
-        #region textboxClearandSelectonEntry
+        #region textboxClearandSelectionEntry
         //lets discuss how these button clearing should work
         private void FirstNameTextBox_Click(object sender, EventArgs e)
         {
@@ -111,5 +111,11 @@ namespace PersonList
             SearchTextBox.Select();
         }
         #endregion
+
+        private void SortButton_Click(object sender, EventArgs e)
+        {
+            peopleList.Sort();
+            UpdateListBox();
+        }
     }
 }
