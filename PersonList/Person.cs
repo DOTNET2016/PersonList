@@ -26,6 +26,9 @@ namespace PersonList
         {
             _firstName = FirstName;
             _lastName = LastName;
+            _childFirstName = FemaleFirstName;
+            _childLastName = MaleLastName;
+            _childTitle = "Master ";
         }
 
 
@@ -47,7 +50,10 @@ namespace PersonList
         {
 
             Child newChild = new Child(_childFirstName, _childLastName);
-            newChild.ChildName = parent2.FemaleFirstName + parent1.MaleLastName;
+            newChild.ChildFirstName = parent2.FemaleFirstName;
+            newChild.ChildLastName = parent1.MaleLastName;
+            //newChild.ChildTitle = _childTitle;
+            //newChild.ChildName = _childTitle + " " + parent2.FemaleFirstName + " " + parent1.MaleLastName;
 
             return newChild;
         }

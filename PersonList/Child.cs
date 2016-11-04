@@ -14,11 +14,15 @@ namespace PersonList
         public string ChildLastName { get; set; }
         public string ChildTitle { get; set; }
 
-        public Child(string FirstName, string LastName) 
-            : base(FirstName, LastName)
+        public Child(string ChildFirstName, string ChildLastName) 
+            : base(ChildFirstName, ChildLastName)
         {
-
+            ChildFirstName = FemaleFirstName;
+            ChildLastName = MaleLastName;
         }
-
+        public override string ToString()
+        {
+            return ChildTitle + " " + ChildFirstName + " " + ChildLastName;
+        }
     }
 }
