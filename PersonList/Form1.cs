@@ -139,6 +139,10 @@ namespace PersonList
         private void SearchTextBox_TextChanged(object sender, EventArgs e)
         {
             //Live search will be here!
+            //PersonListBox.DataSource = null;
+            PersonListBox.DataSource = new BindingList<Person>(peopleList.Where(m => m.ToString().Contains(SearchTextBox.Text)).ToList());
+
+            UpdateListBox();
         }
 
         private void MergeButton_Click(object sender, EventArgs e)
@@ -152,6 +156,11 @@ namespace PersonList
             PersonListBox.ClearSelected();
             //else
             //    MessageBox.Show("Select some parents to make a baby!", "Whose your Daddy?");
-        }  
+        }
+
+        private void TabControlWindow_Selected(object sender, TabControlEventArgs e)
+        {
+            PersonListBox.DataSource = peopleList;
+        }
     }
 }
