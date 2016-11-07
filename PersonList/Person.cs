@@ -17,7 +17,6 @@ namespace PersonList
             _firstName = FirstName;
             _lastName = LastName;
             _title = Title;
-
         }
 
         private enum Titles { Null, Mr, Mrs, Ms, Miss, Master }

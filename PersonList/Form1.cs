@@ -13,17 +13,13 @@ namespace PersonList
     public partial class Form1 : Form
     {
         MissionControl m1 = new MissionControl();
-        public string ChildFirstName { get; set; }
-        public string ChildLastName { get; set; }
+        List<Person> peopleList = new List<Person>();
 
         // Male = Mr
         // Female (un-married) = Ms
         // Female (married) = Mrs
         // Child (girl) = Miss
         // Child (boy) = Master
-
-        List<Person> peopleList = new List<Person>();
-
 
         public Form1()
         {
@@ -40,7 +36,6 @@ namespace PersonList
         {
             m1.FirstName = FirstNameTextBox.Text;
             m1.LastName = LastNameTextBox.Text;
-           
 
             //now the Add button wont do anything until ether male or female is checked
             if ((FemaleButton.Checked == false) && (MaleButton.Checked == false))
@@ -62,7 +57,7 @@ namespace PersonList
                 MessageBox.Show("Please enter a name", "What's in a name?");
             }
             UpdateListBox();
-            //PersonListBox.ClearSelected();
+            PersonListBox.ClearSelected();
         }
 
         private void RemoveButton_Click(object sender, EventArgs e)
@@ -87,6 +82,7 @@ namespace PersonList
         {
             ((CurrencyManager)PersonListBox.BindingContext[peopleList]).Refresh();
         }
+
         private void UpdateButtons()
         {
             if (peopleList.Count == 0)
@@ -142,7 +138,7 @@ namespace PersonList
 
         private void SearchTextBox_TextChanged(object sender, EventArgs e)
         {
-
+            //Live search will be here!
         }
 
         private void MergeButton_Click(object sender, EventArgs e)
