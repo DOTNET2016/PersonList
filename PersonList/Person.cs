@@ -15,7 +15,7 @@ namespace PersonList
 
         private static string _childFirstName;
         private static string _childLastName;
-        private static string _childTitle;
+        private static string _childTitleGirl;
 
         public string FemaleFirstName { get; set; }
         public string FemaleLastName { get; set; }
@@ -26,9 +26,10 @@ namespace PersonList
         {
             _firstName = FirstName;
             _lastName = LastName;
-            _childFirstName = FemaleFirstName;
-            _childLastName = MaleLastName;
-            _childTitle = "Master ";
+            //_childFirstName = FemaleFirstName;
+            //_childLastName = MaleLastName;
+            _childTitleGirl = "Miss ";
+
         }
 
 
@@ -52,8 +53,8 @@ namespace PersonList
             Child newChild = new Child(_childFirstName, _childLastName);
             newChild.ChildFirstName = parent2.FemaleFirstName;
             newChild.ChildLastName = parent1.MaleLastName;
-            //newChild.ChildTitle = _childTitle;
-            //newChild.ChildName = _childTitle + " " + parent2.FemaleFirstName + " " + parent1.MaleLastName;
+            newChild.ChildTitle = _childTitleGirl;
+            newChild.ChildName = _childTitleGirl + " " + parent2.FemaleFirstName + " " + parent1.MaleLastName;
 
             return newChild;
         }

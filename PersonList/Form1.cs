@@ -24,6 +24,7 @@ namespace PersonList
 
         List<Person> peopleList = new List<Person>();
 
+
         public Form1()
         {
             InitializeComponent();
@@ -147,25 +148,16 @@ namespace PersonList
         {
 
         }
-        private void MakeABaby()
-        {
-            Male man = new Male(m1.MaleFirstName, m1.MaleLastName);
-            Female woman = new Female(m1.FemaleFirstName, m1.FemaleLastName);
-
-            woman.FemaleFirstName = m1.FemaleFirstName;
-            man.MaleLastName = m1.MaleLastName;
-
-            var newChild = man + woman;
-            //peopleList.Add(new Child(m1.FemaleFirstName, m1.MaleLastName));
-            peopleList.Add(newChild);
-            //PersonListBox.SelectedItems.Add(newChild);
-            UpdateListBox();
-            PersonListBox.ClearSelected();
-        }
 
         private void MergeButton_Click(object sender, EventArgs e)
         {
-            MakeABaby();                    
+            if (PersonListBox.SelectedItems.Count == 2)
+            {
+                m1.MakeABaby(PersonListBox.SelectedItems[0], PersonListBox.SelectedItems[1]);
+                peopleList.Add(m1.newChild);
+                UpdateListBox();
+                PersonListBox.ClearSelected();
+            }
         }  
     }
 }
