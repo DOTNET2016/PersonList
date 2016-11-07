@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace PersonList
 {
-    class Child : Person
+    public class Child : Person
     {
 
         public string ChildName { get; set; }
@@ -17,8 +17,7 @@ namespace PersonList
         public Child(string ChildFirstName, string ChildLastName) 
             : base(ChildFirstName, ChildLastName)
         {
-            ChildFirstName = FemaleFirstName;
-            ChildLastName = MaleLastName;
+            
         }
         public override string ToString()
         {

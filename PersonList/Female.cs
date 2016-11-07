@@ -6,13 +6,10 @@ using System.Threading.Tasks;
 
 namespace PersonList
 {
-    class Female : Person
+    public class Female : Person
     {
         private string _Mrs { get; set; }
         private string _Ms { get; set; }
-
-        //public string FemaleFirstName { get; set; }
-        //public string FemaleLastName { get; set; }
 
         public Female(string FemaleFirstName, string FemaleLastName) 
             : base(FemaleFirstName, FemaleLastName)

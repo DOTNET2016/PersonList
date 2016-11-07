@@ -44,29 +44,25 @@ namespace PersonList
 
             //now the Add button wont do anything until ether male or female is checked
             if ((FemaleButton.Checked == false) && (MaleButton.Checked == false))
-                MessageBox.Show("Please select either Male or Female");
+                MessageBox.Show("Please select either Male or Female", "Nobody Selected");
             else if (FemaleButton.Checked && m1.CheckInput())
             {
-                m1.FemaleFirstName = FirstNameTextBox.Text;
-                m1.FemaleLastName = LastNameTextBox.Text;
                 peopleList.Add(new Female(FirstNameTextBox.Text, LastNameTextBox.Text));
                 RemoveButton.Enabled = true;
                 RemoveAllButton.Enabled = true;
             }
             else if (MaleButton.Checked && m1.CheckInput())
             {
-                m1.MaleFirstName = FirstNameTextBox.Text;
-                m1.MaleLastName = LastNameTextBox.Text;
                 peopleList.Add(new Male(FirstNameTextBox.Text, LastNameTextBox.Text));
                 RemoveButton.Enabled = true;
                 RemoveAllButton.Enabled = true;
             }
             else
             {
-                MessageBox.Show("Please enter a name");
+                MessageBox.Show("Please enter a name", "What's in a name?");
             }
             UpdateListBox();
-            PersonListBox.ClearSelected();
+            //PersonListBox.ClearSelected();
         }
 
         private void RemoveButton_Click(object sender, EventArgs e)
@@ -153,11 +149,13 @@ namespace PersonList
         {
             if (PersonListBox.SelectedItems.Count == 2)
             {
-                m1.MakeABaby(PersonListBox.SelectedItems[0], PersonListBox.SelectedItems[1]);
-                peopleList.Add(m1.newChild);
-                UpdateListBox();
-                PersonListBox.ClearSelected();
+                m1.MakeABaby((Person)PersonListBox.SelectedItems[0], (Person)PersonListBox.SelectedItems[1]);
             }
+            peopleList.Add(m1.newBaby);
+            UpdateListBox();
+            PersonListBox.ClearSelected();
+            //else
+            //    MessageBox.Show("Select some parents to make a baby!", "Whose your Daddy?");
         }  
     }
 }

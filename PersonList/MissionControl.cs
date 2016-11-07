@@ -9,17 +9,13 @@ namespace PersonList
 {
     class MissionControl
     {
+       
         public string FirstName { get; set; }
         public string LastName { get; set; }
         private int parsedId1;
         private int parsedId2;
 
-        public string FemaleFirstName { get; set; }      
-        public string FemaleLastName { get; set; }        
-        public string MaleFirstName { get; set; }
-        public string MaleLastName { get; set; }
-
-        public Person newChild { get; set; }
+        public Child newBaby { get; set; }
 
         public bool CheckInput()
         {
@@ -36,17 +32,10 @@ namespace PersonList
             return true;
         }
 
-        public Person MakeABaby(Person parent1, Person parent2)
+        public Child MakeABaby(Person parent1, Person parent2)
         {
-            Male man = new Male(MaleFirstName, MaleLastName);
-            Female woman = new Female(FemaleFirstName, FemaleLastName);
-
-            woman.FemaleFirstName = FemaleFirstName;
-            man.MaleLastName = MaleLastName;
-
-            newChild = man + woman;
-
-            return newChild;
+            newBaby = parent1 + parent2;
+            return newBaby;
         }
     }
 }
