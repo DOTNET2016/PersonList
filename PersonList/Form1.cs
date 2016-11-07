@@ -42,13 +42,13 @@ namespace PersonList
                 MessageBox.Show("Please select either Male or Female", "Nobody Selected");
             else if (FemaleButton.Checked && m1.CheckInput())
             {
-                peopleList.Add(new Female("2", FirstNameTextBox.Text, LastNameTextBox.Text));
+                peopleList.Add(new Female(2, FirstNameTextBox.Text, LastNameTextBox.Text));
                 RemoveButton.Enabled = true;
                 RemoveAllButton.Enabled = true;
             }
             else if (MaleButton.Checked && m1.CheckInput())
             {
-                peopleList.Add(new Male("1", FirstNameTextBox.Text, LastNameTextBox.Text));
+                peopleList.Add(new Male(1, FirstNameTextBox.Text, LastNameTextBox.Text));
                 RemoveButton.Enabled = true;
                 RemoveAllButton.Enabled = true;
             }

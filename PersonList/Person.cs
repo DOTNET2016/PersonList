@@ -8,22 +8,58 @@ namespace PersonList
 {
     public abstract class Person : IComparable<Person>
     {
-        private string _firstName { get; set; }
-        private string _lastName { get; set; }
-        private string _title { get; set; }
+        private string firstName;
+        private string lastName;
+        private int title;
 
-        public Person(string Title, string FirstName, string LastName)//constructor
+        private string _firstName
+        { 
+            get
+                {
+                    return firstName;
+                }
+            set
+                {
+                    firstName = value;
+                }
+        }
+
+        private string _lastName
         {
-            _firstName = FirstName;
-            _lastName = LastName;
-            _title = Title;
+            get
+            {
+                return lastName;
+            }
+            set
+            {
+                lastName = value;
+            }
+        }
+
+        private int _title
+        {
+            get
+            {
+                return title;
+            }
+            set
+            {
+                title = value;
+            }
+        }
+
+        public Person(int Title, string FirstName, string LastName)//constructor
+        {
+            firstName = FirstName;
+            lastName = LastName;
+            title = Title;
         }
 
         private enum Titles { Null, Mr, Mrs, Ms, Miss, Master }
 
         public override string ToString()
         {
-            return _title + " " + _firstName + " " + _lastName;
+            return ((Titles)_title) + " " + _firstName + " " + _lastName;
         }
         
         public int CompareTo(Person other)
@@ -37,10 +73,10 @@ namespace PersonList
 
         public static Child operator +(Person parent1, Person parent2)
         {
-            Child newChild = new Child("0","", "");
+            Child newChild = new Child(0,"", "");
             newChild._firstName = parent2._firstName;
             newChild._lastName = parent1._lastName;
-            newChild._title = "4";
+            newChild._title = 4;
 
             return newChild;
         }
