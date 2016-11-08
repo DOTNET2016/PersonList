@@ -55,8 +55,6 @@ namespace PersonList
             title = TitleNr;
         }
 
-        private enum Titles { Null, Mr, Mrs, Ms, Miss, Master }
-
         public override string ToString()
         {
             return ((Titles)_title) + " " + _firstName + " " + _lastName;
@@ -80,5 +78,7 @@ namespace PersonList
 
             return newChild;
         }
+
+        private enum Titles { Null, Mr, Mrs, Ms, Miss, Master }
     }
 }

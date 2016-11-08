@@ -15,12 +15,6 @@ namespace PersonList
         MissionControl m1 = new MissionControl();
         List<Person> peopleList = new List<Person>();
 
-        // Male = Mr
-        // Female (un-married) = Ms
-        // Female (married) = Mrs
-        // Child (girl) = Miss
-        // Child (boy) = Master
-
         public Form1()
         {
             InitializeComponent();
@@ -110,15 +104,19 @@ namespace PersonList
 
         private void MergeButton_Click(object sender, EventArgs e)
         {
-            if (PersonListBox.SelectedItems.Count == 2)
+            if (PersonListBox.SelectedItems.Count >= 3)
+            {
+                MessageBox.Show("Only two people make a baby!", "Do the maths..");
+                PersonListBox.ClearSelected();
+            }
+           else if (PersonListBox.SelectedItems.Count == 2)
             {
                 m1.MakeABaby((Person)PersonListBox.SelectedItems[0], (Person)PersonListBox.SelectedItems[1]);
-            }
-            peopleList.Add(m1.newBaby);
+                peopleList.Add(m1.newBaby);
+            }           
             UpdateListBox();
             PersonListBox.ClearSelected();
-            //else
-            //    MessageBox.Show("Select some parents to make a baby!", "Whose your Daddy?");
+            
         }
 
         #region LiveSearch
