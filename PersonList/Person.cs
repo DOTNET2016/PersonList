@@ -53,7 +53,6 @@ namespace PersonList
             }
             return newChild;
         }
-
         private enum Titles { Null, Mr, Mrs, Miss, Master }
     }
 }

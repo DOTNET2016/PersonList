@@ -112,7 +112,7 @@ namespace PersonList
            else if (PersonListBox.SelectedItems.Count == 2)
             {
                 m1.MakeABaby((Person)PersonListBox.SelectedItems[0], (Person)PersonListBox.SelectedItems[1]);
-                peopleList.Add(m1.newBaby);
+                peopleList.Add(m1.NewBaby);
             }           
             UpdateListBox();
             PersonListBox.ClearSelected();
