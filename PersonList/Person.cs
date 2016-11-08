@@ -72,10 +72,19 @@ namespace PersonList
         public static Child operator +(Person parent1, Person parent2)
         {
             Child newChild = new Child(0,"", "");
-            newChild._firstName = parent2._firstName;
-            newChild._lastName = parent1._lastName;
-            newChild._title = 4;
 
+            if (parent1._title == 1)
+            {
+                newChild._firstName = parent1._firstName;
+                newChild._lastName = parent2._lastName;
+                newChild._title = 5;
+            }
+            else
+            {
+                newChild._firstName = parent2._firstName;
+                newChild._lastName = parent1._lastName;
+                newChild._title = 4;
+            }
             return newChild;
         }
 
