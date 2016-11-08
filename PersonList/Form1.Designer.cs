@@ -56,7 +56,7 @@
             // 
             // PersonListBox
             // 
-            this.PersonListBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
+            this.PersonListBox.BackColor = System.Drawing.Color.SlateBlue;
             this.PersonListBox.ColumnWidth = 345;
             this.PersonListBox.Cursor = System.Windows.Forms.Cursors.Arrow;
             this.PersonListBox.Font = new System.Drawing.Font("Comic Sans MS", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -260,7 +260,7 @@
             // 
             // PersonGroupBox
             // 
-            this.PersonGroupBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
+            this.PersonGroupBox.BackColor = System.Drawing.Color.SlateBlue;
             this.PersonGroupBox.Controls.Add(this.PersonListBox);
             this.PersonGroupBox.Font = new System.Drawing.Font("Comic Sans MS", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.PersonGroupBox.ForeColor = System.Drawing.Color.White;

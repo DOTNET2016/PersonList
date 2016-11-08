@@ -51,7 +51,6 @@ namespace PersonList
                 CustomMessageBox.ShowBox("Everybody needs a name...\n\nWhere's yours?");
             }
             UpdateListBox();
-            PersonListBox.ClearSelected();
         }
 
         private void RemoveButton_Click(object sender, EventArgs e)
@@ -61,7 +60,6 @@ namespace PersonList
 
             UpdateListBox();
             UpdateButtons();
-            PersonListBox.ClearSelected();
         }
 
         private void ClearAllButton_Click(object sender, EventArgs e)
@@ -69,12 +67,12 @@ namespace PersonList
             peopleList.Clear();
             UpdateListBox();
             UpdateButtons();
-            PersonListBox.ClearSelected();
         }
 
         private void UpdateListBox()
         {
             ((CurrencyManager)PersonListBox.BindingContext[peopleList]).Refresh();
+            PersonListBox.ClearSelected();
         }
 
         private void UpdateButtons()
@@ -121,8 +119,6 @@ namespace PersonList
                 CustomMessageBox.ShowBox("Hi-dilly-ho, neighborinhos!\n\nI've done everything the Bible says,\neven the stuff that contradicts \nthe other stuff.\n\nAnd now we're having a baby!");
             }           
             UpdateListBox();
-            PersonListBox.ClearSelected();
-            
         }
 
         #region LiveSearch

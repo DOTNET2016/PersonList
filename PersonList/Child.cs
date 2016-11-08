@@ -10,12 +10,7 @@ namespace PersonList
     {
         public Child(int TitleNr, string FirstName, string LastName) 
             : base(TitleNr, FirstName, LastName)
-        {  
-        }
-
-        public override string ToString()
         {
-            return base.ToString();
         }
     }
 }

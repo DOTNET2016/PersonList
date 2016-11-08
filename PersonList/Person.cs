@@ -22,7 +22,7 @@ namespace PersonList
 
         public override string ToString()
         {
-            return ((Titles)_titleNr) + " " + _firstName + " " + _lastName;
+            return ((Titles)_titleNr) + ". " + _firstName + " " + _lastName;
         }
         
         public int CompareTo(Person other)
@@ -36,23 +36,21 @@ namespace PersonList
 
         public static Child operator +(Person parent1, Person parent2)
         {
-            Child newChild = new Child(0,"", "");
+            Child newChild = new Child(3,"", "");
            
             switch (parent1._titleNr)
             {
                 case 1:// Mr
                     newChild._firstName = parent2._firstName;
                     newChild._lastName = parent1._lastName;
-                    newChild._titleNr = 3;
                     break;
                 case 2:// Mrs
                     newChild._firstName = parent2._firstName;
                     newChild._lastName = parent1._lastName;
-                    newChild._titleNr = 4;
                     break;
             }
             return newChild;
         }
-        private enum Titles { Null, Mr, Mrs, Miss, Master }
+        private enum Titles { Null, Mr, Mrs, Child }
     }
 }

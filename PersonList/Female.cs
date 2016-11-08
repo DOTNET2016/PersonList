@@ -12,10 +12,5 @@ namespace PersonList
             : base(TitleNr, FirstName, LastName)
         {   
         }
-
-        public override string ToString()
-        {
-            return base.ToString();
-        }
     }
 }
