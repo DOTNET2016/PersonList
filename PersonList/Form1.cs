@@ -24,7 +24,7 @@ namespace PersonList
         public Form1()
         {
             InitializeComponent();
-            PersonListBox.DataSource = peopleList;//moved it here
+            PersonListBox.DataSource = peopleList;
         }
 
         private void Form1_Load(object sender, EventArgs e)
@@ -139,7 +139,6 @@ namespace PersonList
         private void SearchTextBox_TextChanged(object sender, EventArgs e)
         {
             //Live search will be here!
-            //PersonListBox.DataSource = null;
             PersonListBox.DataSource = new BindingList<Person>(peopleList.Where(m => m.ToString().Contains(SearchTextBox.Text)).ToList());
 
             UpdateListBox();
@@ -158,7 +157,7 @@ namespace PersonList
             //    MessageBox.Show("Select some parents to make a baby!", "Whose your Daddy?");
         }
 
-        private void TabControlWindow_Selected(object sender, TabControlEventArgs e)
+        private void TabControlWindow_SelectedIndexChanged(object sender, EventArgs e)
         {
             PersonListBox.DataSource = peopleList;
         }

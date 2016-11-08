@@ -137,7 +137,7 @@
             this.TabControlWindow.Size = new System.Drawing.Size(338, 141);
             this.TabControlWindow.TabIndex = 0;
             this.TabControlWindow.TabStop = false;
-            this.TabControlWindow.Selected += new System.Windows.Forms.TabControlEventHandler(this.TabControlWindow_Selected);
+            this.TabControlWindow.SelectedIndexChanged += new System.EventHandler(this.TabControlWindow_SelectedIndexChanged);
             // 
             // NewPersonTab
             // 
