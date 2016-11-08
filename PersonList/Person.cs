@@ -36,7 +36,7 @@ namespace PersonList
             }
         }
 
-        private int _title
+        private int _Title
         {
             get
             {
@@ -57,7 +57,7 @@ namespace PersonList
 
         public override string ToString()
         {
-            return ((Titles)_title) + " " + _firstName + " " + _lastName;
+            return ((Titles)_Title) + " " + _firstName + " " + _lastName;
         }
         
         public int CompareTo(Person other)
@@ -73,25 +73,22 @@ namespace PersonList
         {
             Child newChild = new Child(0,"", "");
 
-            switch (parent1._title)
+            switch (parent1._Title)
             {
                 case 1:// Mr
                     newChild._firstName = parent2._firstName;
                     newChild._lastName = parent1._lastName;
-                    newChild._title = 3;
+                    newChild._Title = 3;
                     break;
 
                 case 2:// Mrs
                     newChild._firstName = parent2._firstName;
                     newChild._lastName = parent1._lastName;
-                    newChild._title = 4;
+                    newChild._Title = 4;
                     break;
-            }
-            
-            
+            }         
             return newChild;
         }
-
         private enum Titles { Null, Mr, Mrs, Miss, Master }
     }
 }

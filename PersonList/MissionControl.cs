@@ -12,10 +12,10 @@ namespace PersonList
        
         public string FirstName { get; set; }
         public string LastName { get; set; }
-        private int parsedId1;
-        private int parsedId2;
+        private int _parsedId1;
+        private int _parsedId2;
 
-        public Child newBaby { get; set; }
+        public Child NewBaby { get; set; }
 
         public bool CheckInput()
         {
@@ -25,7 +25,7 @@ namespace PersonList
             {
                 return false;
             }
-            else if (int.TryParse(FirstName, out parsedId1) || (int.TryParse(FirstName, out parsedId2)))
+            else if (int.TryParse(FirstName, out _parsedId1) || (int.TryParse(FirstName, out _parsedId2)))
             {
                 return false;
             }
@@ -34,8 +34,8 @@ namespace PersonList
         //method to make a new baby taking two people as arguments and combining them to make a new human being! 
         public Child MakeABaby(Person parent1, Person parent2)
         {
-            newBaby = parent1 + parent2;
-            return newBaby;
+            NewBaby = parent1 + parent2;
+            return NewBaby;
         }
     }
 }
