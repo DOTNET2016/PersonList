@@ -129,7 +129,7 @@ namespace PersonList
         {
             // known cevat:
             // cant remove people in the list while searching.
-            PersonListBox.DataSource = new BindingList<Person>(peopleList.Where(m => m.ToString().Contains(SearchTextBox.Text)).ToList());
+            PersonListBox.DataSource = new BindingList<Person>(peopleList.Where(m => m.ToString().ToLower().Contains(SearchTextBox.Text.ToLower())).ToList());
 
             UpdateListBox();
         }

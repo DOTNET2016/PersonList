@@ -8,56 +8,21 @@ namespace PersonList
 {
     public abstract class Person : IComparable<Person>
     {
-        private string firstName;
-        private string lastName;
-        private int title;
+        private string _firstName;
+        private string _lastName;
+        private int _titleNr;
 
-        private string _firstName
-        { 
-            get
-                {
-                    return firstName;
-                }
-            set
-                {
-                    firstName = value;
-                }
-        }
-
-        private string _lastName
-        {
-            get
-            {
-                return lastName;
-            }
-            set
-            {
-                lastName = value;
-            }
-        }
-
-        private int _title
-        {
-            get
-            {
-                return title;
-            }
-            set
-            {
-                title = value;
-            }
-        }
 
         public Person(int TitleNr, string FirstName, string LastName)//constructor
         {
-            firstName = FirstName;
-            lastName = LastName;
-            title = TitleNr;
+            _firstName = FirstName;
+            _lastName = LastName;
+            _titleNr = TitleNr;
         }
 
         public override string ToString()
         {
-            return ((Titles)_title) + " " + _firstName + " " + _lastName;
+            return ((Titles)_titleNr) + " " + _firstName + " " + _lastName;
         }
         
         public int CompareTo(Person other)
@@ -73,22 +38,19 @@ namespace PersonList
         {
             Child newChild = new Child(0,"", "");
 
-            switch (parent1._title)
+            switch (parent1._titleNr)
             {
                 case 1:// Mr
                     newChild._firstName = parent2._firstName;
                     newChild._lastName = parent1._lastName;
-                    newChild._title = 3;
+                    newChild._titleNr = 3;
                     break;
-
                 case 2:// Mrs
                     newChild._firstName = parent2._firstName;
                     newChild._lastName = parent1._lastName;
-                    newChild._title = 4;
+                    newChild._titleNr = 4;
                     break;
             }
-            
-            
             return newChild;
         }
 
