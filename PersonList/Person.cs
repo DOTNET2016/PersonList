@@ -48,11 +48,11 @@ namespace PersonList
             }
         }
 
-        public Person(int Title, string FirstName, string LastName)//constructor
+        public Person(int TitleNr, string FirstName, string LastName)//constructor
         {
             firstName = FirstName;
             lastName = LastName;
-            title = Title;
+            title = TitleNr;
         }
 
         private enum Titles { Null, Mr, Mrs, Ms, Miss, Master }

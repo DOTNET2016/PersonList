@@ -8,8 +8,8 @@ namespace PersonList
 {
     public class Male : Person
     {
-        public Male(int Title, string FirstName, string LastName)
-            : base(Title, FirstName, LastName)
+        public Male(int TitleNr, string FirstName, string LastName)
+            : base(TitleNr, FirstName, LastName)
         {
         }
 

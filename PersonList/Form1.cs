@@ -138,7 +138,9 @@ namespace PersonList
 
         private void SearchTextBox_TextChanged(object sender, EventArgs e)
         {
-            //Live search will be here!
+            //Live search is here!
+            //known cevat:
+            //cant remove people in the list while searching.
             PersonListBox.DataSource = new BindingList<Person>(peopleList.Where(m => m.ToString().Contains(SearchTextBox.Text)).ToList());
 
             UpdateListBox();
