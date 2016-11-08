@@ -104,12 +104,12 @@ namespace PersonList
 
         private void MergeButton_Click(object sender, EventArgs e)
         {
-            if (PersonListBox.SelectedItems.Count >= 3)
+            if (PersonListBox.SelectedItems.Count >= 3 || PersonListBox.SelectedItems.Count < 2)
             {
                 CustomMessageBox.ShowBox("Only two people make a baby!\n\nDo the maths..");
                 PersonListBox.ClearSelected();
             }
-            if ((Person)PersonListBox.SelectedItems[0] == (Person)PersonListBox.SelectedItems[0])
+            else if ((Person)PersonListBox.SelectedItems[0] == (Person)PersonListBox.SelectedItems[1])
             {
                 CustomMessageBox.ShowBox("You need a boy and a girl to\nmake babies!\n\nDidn't they teach you anything\nat school?");
                 PersonListBox.ClearSelected();
@@ -137,6 +137,7 @@ namespace PersonList
             // cant remove people in the list while searching.
             PersonListBox.DataSource = new BindingList<Person>(peopleList.Where(m => m.ToString().ToLower().Contains(SearchTextBox.Text.ToLower())).ToList());
 
+            PersonListBox.ClearSelected();
             UpdateListBox();
         }
 
@@ -171,6 +172,7 @@ namespace PersonList
         private void SearchTab_Enter(object sender, EventArgs e)
         {
             SearchTextBox.Select();
+            SearchTextBox.Clear();
         }
         #endregion
     }
