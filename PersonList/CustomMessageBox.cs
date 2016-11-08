@@ -32,7 +32,7 @@ namespace PersonList
             newMessageBox.ShowDialog();
             return Button_id;
         }
-
+        //
         public static string ShowBox(string textMessage, string textTitle)
         {
             newMessageBox = new CustomMessageBox();

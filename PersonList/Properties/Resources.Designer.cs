@@ -63,6 +63,16 @@ namespace PersonList.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap homer {
+            get {
+                object obj = ResourceManager.GetObject("homer", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Ned_Flanders {
             get {
                 object obj = ResourceManager.GetObject("Ned_Flanders", resourceCulture);
