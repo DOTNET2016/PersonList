@@ -45,7 +45,7 @@
             this.FirstOrLastNameLabel = new System.Windows.Forms.Label();
             this.SearchTextBox = new System.Windows.Forms.TextBox();
             this.PersonGroupBox = new System.Windows.Forms.GroupBox();
-            this.RemoveAllButton = new System.Windows.Forms.Button();
+            this.ClearAllButton = new System.Windows.Forms.Button();
             this.TabControlWindow.SuspendLayout();
             this.NewPersonTab.SuspendLayout();
             this.SearchTab.SuspendLayout();
@@ -254,24 +254,24 @@
             this.PersonGroupBox.TabStop = false;
             this.PersonGroupBox.Text = "Persons";
             // 
-            // RemoveAllButton
+            // ClearAllButton
             // 
-            this.RemoveAllButton.Enabled = false;
-            this.RemoveAllButton.Location = new System.Drawing.Point(302, 558);
-            this.RemoveAllButton.Margin = new System.Windows.Forms.Padding(2);
-            this.RemoveAllButton.Name = "RemoveAllButton";
-            this.RemoveAllButton.Size = new System.Drawing.Size(90, 25);
-            this.RemoveAllButton.TabIndex = 3;
-            this.RemoveAllButton.Text = "Remove All";
-            this.RemoveAllButton.UseVisualStyleBackColor = true;
-            this.RemoveAllButton.Click += new System.EventHandler(this.RemoveAllButton_Click);
+            this.ClearAllButton.Enabled = false;
+            this.ClearAllButton.Location = new System.Drawing.Point(302, 558);
+            this.ClearAllButton.Margin = new System.Windows.Forms.Padding(2);
+            this.ClearAllButton.Name = "ClearAllButton";
+            this.ClearAllButton.Size = new System.Drawing.Size(90, 25);
+            this.ClearAllButton.TabIndex = 3;
+            this.ClearAllButton.Text = "Clear All";
+            this.ClearAllButton.UseVisualStyleBackColor = true;
+            this.ClearAllButton.Click += new System.EventHandler(this.ClearAllButton_Click);
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(120F, 120F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
             this.ClientSize = new System.Drawing.Size(446, 594);
-            this.Controls.Add(this.RemoveAllButton);
+            this.Controls.Add(this.ClearAllButton);
             this.Controls.Add(this.TabControlWindow);
             this.Controls.Add(this.RemoveButton);
             this.Controls.Add(this.MergeButton);
@@ -314,7 +314,7 @@
         private System.Windows.Forms.Label FirstOrLastNameLabel;
         private System.Windows.Forms.TextBox SearchTextBox;
         private System.Windows.Forms.GroupBox PersonGroupBox;
-        private System.Windows.Forms.Button RemoveAllButton;
+        private System.Windows.Forms.Button ClearAllButton;
     }
 }
 

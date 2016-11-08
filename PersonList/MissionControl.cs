@@ -25,7 +25,7 @@ namespace PersonList
             {
                 return false;
             }
-            else if (int.TryParse(FirstName, out _parsedId1) || (int.TryParse(FirstName, out _parsedId2)))
+            else if (int.TryParse(FirstName, out _parsedId1) || (int.TryParse(LastName, out _parsedId2)))
             {
                 return false;
             }
