@@ -58,22 +58,22 @@
             this.PersonListBox.Cursor = System.Windows.Forms.Cursors.Arrow;
             this.PersonListBox.FormattingEnabled = true;
             this.PersonListBox.HorizontalScrollbar = true;
-            this.PersonListBox.Location = new System.Drawing.Point(28, 26);
+            this.PersonListBox.ItemHeight = 16;
+            this.PersonListBox.Location = new System.Drawing.Point(35, 32);
             this.PersonListBox.Margin = new System.Windows.Forms.Padding(2);
-            this.PersonListBox.MultiColumn = true;
             this.PersonListBox.Name = "PersonListBox";
             this.PersonListBox.SelectionMode = System.Windows.Forms.SelectionMode.MultiSimple;
-            this.PersonListBox.Size = new System.Drawing.Size(277, 212);
+            this.PersonListBox.Size = new System.Drawing.Size(345, 260);
             this.PersonListBox.TabIndex = 5;
             this.PersonListBox.TabStop = false;
             // 
             // MaleButton
             // 
             this.MaleButton.AutoSize = true;
-            this.MaleButton.Location = new System.Drawing.Point(28, 47);
+            this.MaleButton.Location = new System.Drawing.Point(35, 59);
             this.MaleButton.Margin = new System.Windows.Forms.Padding(2);
             this.MaleButton.Name = "MaleButton";
-            this.MaleButton.Size = new System.Drawing.Size(48, 17);
+            this.MaleButton.Size = new System.Drawing.Size(59, 21);
             this.MaleButton.TabIndex = 19;
             this.MaleButton.Text = "Male";
             this.MaleButton.UseVisualStyleBackColor = true;
@@ -81,10 +81,10 @@
             // FemaleButton
             // 
             this.FemaleButton.AutoSize = true;
-            this.FemaleButton.Location = new System.Drawing.Point(28, 69);
+            this.FemaleButton.Location = new System.Drawing.Point(35, 86);
             this.FemaleButton.Margin = new System.Windows.Forms.Padding(2);
             this.FemaleButton.Name = "FemaleButton";
-            this.FemaleButton.Size = new System.Drawing.Size(59, 17);
+            this.FemaleButton.Size = new System.Drawing.Size(75, 21);
             this.FemaleButton.TabIndex = 20;
             this.FemaleButton.Text = "Female";
             this.FemaleButton.UseVisualStyleBackColor = true;
@@ -92,10 +92,10 @@
             // SortButton
             // 
             this.SortButton.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.SortButton.Location = new System.Drawing.Point(38, 446);
+            this.SortButton.Location = new System.Drawing.Point(48, 558);
             this.SortButton.Margin = new System.Windows.Forms.Padding(2);
             this.SortButton.Name = "SortButton";
-            this.SortButton.Size = new System.Drawing.Size(56, 20);
+            this.SortButton.Size = new System.Drawing.Size(70, 25);
             this.SortButton.TabIndex = 6;
             this.SortButton.Text = "Sort";
             this.SortButton.UseVisualStyleBackColor = true;
@@ -104,10 +104,10 @@
             // MergeButton
             // 
             this.MergeButton.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.MergeButton.Location = new System.Drawing.Point(102, 446);
+            this.MergeButton.Location = new System.Drawing.Point(128, 558);
             this.MergeButton.Margin = new System.Windows.Forms.Padding(2);
             this.MergeButton.Name = "MergeButton";
-            this.MergeButton.Size = new System.Drawing.Size(56, 20);
+            this.MergeButton.Size = new System.Drawing.Size(70, 25);
             this.MergeButton.TabIndex = 5;
             this.MergeButton.Text = "Merge";
             this.MergeButton.UseVisualStyleBackColor = true;
@@ -117,10 +117,10 @@
             // 
             this.RemoveButton.Cursor = System.Windows.Forms.Cursors.Hand;
             this.RemoveButton.Enabled = false;
-            this.RemoveButton.Location = new System.Drawing.Point(166, 446);
+            this.RemoveButton.Location = new System.Drawing.Point(208, 558);
             this.RemoveButton.Margin = new System.Windows.Forms.Padding(2);
             this.RemoveButton.Name = "RemoveButton";
-            this.RemoveButton.Size = new System.Drawing.Size(56, 20);
+            this.RemoveButton.Size = new System.Drawing.Size(70, 25);
             this.RemoveButton.TabIndex = 4;
             this.RemoveButton.Text = "Remove";
             this.RemoveButton.UseVisualStyleBackColor = true;
@@ -130,11 +130,11 @@
             // 
             this.TabControlWindow.Controls.Add(this.NewPersonTab);
             this.TabControlWindow.Controls.Add(this.SearchTab);
-            this.TabControlWindow.Location = new System.Drawing.Point(10, 10);
+            this.TabControlWindow.Location = new System.Drawing.Point(12, 12);
             this.TabControlWindow.Margin = new System.Windows.Forms.Padding(2);
             this.TabControlWindow.Name = "TabControlWindow";
             this.TabControlWindow.SelectedIndex = 0;
-            this.TabControlWindow.Size = new System.Drawing.Size(338, 141);
+            this.TabControlWindow.Size = new System.Drawing.Size(422, 176);
             this.TabControlWindow.TabIndex = 0;
             this.TabControlWindow.TabStop = false;
             this.TabControlWindow.SelectedIndexChanged += new System.EventHandler(this.TabControlWindow_SelectedIndexChanged);
@@ -149,11 +149,11 @@
             this.NewPersonTab.Controls.Add(this.FirstNameTextBox);
             this.NewPersonTab.Controls.Add(this.MaleButton);
             this.NewPersonTab.Controls.Add(this.FemaleButton);
-            this.NewPersonTab.Location = new System.Drawing.Point(4, 22);
+            this.NewPersonTab.Location = new System.Drawing.Point(4, 25);
             this.NewPersonTab.Margin = new System.Windows.Forms.Padding(2);
             this.NewPersonTab.Name = "NewPersonTab";
             this.NewPersonTab.Padding = new System.Windows.Forms.Padding(2);
-            this.NewPersonTab.Size = new System.Drawing.Size(330, 115);
+            this.NewPersonTab.Size = new System.Drawing.Size(414, 147);
             this.NewPersonTab.TabIndex = 0;
             this.NewPersonTab.Text = "New person";
             this.NewPersonTab.Enter += new System.EventHandler(this.NewPersonTab_Enter);
@@ -161,10 +161,10 @@
             // AddButton
             // 
             this.AddButton.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.AddButton.Location = new System.Drawing.Point(244, 47);
+            this.AddButton.Location = new System.Drawing.Point(305, 59);
             this.AddButton.Margin = new System.Windows.Forms.Padding(2);
             this.AddButton.Name = "AddButton";
-            this.AddButton.Size = new System.Drawing.Size(60, 20);
+            this.AddButton.Size = new System.Drawing.Size(75, 25);
             this.AddButton.TabIndex = 2;
             this.AddButton.Text = "Add";
             this.AddButton.UseVisualStyleBackColor = true;
@@ -173,38 +173,38 @@
             // LastNameLabel
             // 
             this.LastNameLabel.AutoSize = true;
-            this.LastNameLabel.Location = new System.Drawing.Point(193, 9);
+            this.LastNameLabel.Location = new System.Drawing.Point(241, 11);
             this.LastNameLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.LastNameLabel.Name = "LastNameLabel";
-            this.LastNameLabel.Size = new System.Drawing.Size(56, 13);
+            this.LastNameLabel.Size = new System.Drawing.Size(74, 17);
             this.LastNameLabel.TabIndex = 8;
             this.LastNameLabel.Text = "Last name";
             // 
             // FirstNameLabel
             // 
             this.FirstNameLabel.AutoSize = true;
-            this.FirstNameLabel.Location = new System.Drawing.Point(29, 9);
+            this.FirstNameLabel.Location = new System.Drawing.Point(36, 11);
             this.FirstNameLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.FirstNameLabel.Name = "FirstNameLabel";
-            this.FirstNameLabel.Size = new System.Drawing.Size(55, 13);
+            this.FirstNameLabel.Size = new System.Drawing.Size(74, 17);
             this.FirstNameLabel.TabIndex = 7;
             this.FirstNameLabel.Text = "First name";
             // 
             // LastNameTextBox
             // 
-            this.LastNameTextBox.Location = new System.Drawing.Point(192, 25);
+            this.LastNameTextBox.Location = new System.Drawing.Point(240, 31);
             this.LastNameTextBox.Margin = new System.Windows.Forms.Padding(2);
             this.LastNameTextBox.Name = "LastNameTextBox";
-            this.LastNameTextBox.Size = new System.Drawing.Size(113, 20);
+            this.LastNameTextBox.Size = new System.Drawing.Size(140, 22);
             this.LastNameTextBox.TabIndex = 1;
             this.LastNameTextBox.Click += new System.EventHandler(this.LastNameTextBox_Click);
             // 
             // FirstNameTextBox
             // 
-            this.FirstNameTextBox.Location = new System.Drawing.Point(28, 25);
+            this.FirstNameTextBox.Location = new System.Drawing.Point(35, 31);
             this.FirstNameTextBox.Margin = new System.Windows.Forms.Padding(2);
             this.FirstNameTextBox.Name = "FirstNameTextBox";
-            this.FirstNameTextBox.Size = new System.Drawing.Size(113, 20);
+            this.FirstNameTextBox.Size = new System.Drawing.Size(140, 22);
             this.FirstNameTextBox.TabIndex = 0;
             this.FirstNameTextBox.Click += new System.EventHandler(this.FirstNameTextBox_Click);
             // 
@@ -213,11 +213,11 @@
             this.SearchTab.BackColor = System.Drawing.SystemColors.Control;
             this.SearchTab.Controls.Add(this.FirstOrLastNameLabel);
             this.SearchTab.Controls.Add(this.SearchTextBox);
-            this.SearchTab.Location = new System.Drawing.Point(4, 22);
+            this.SearchTab.Location = new System.Drawing.Point(4, 25);
             this.SearchTab.Margin = new System.Windows.Forms.Padding(2);
             this.SearchTab.Name = "SearchTab";
             this.SearchTab.Padding = new System.Windows.Forms.Padding(2);
-            this.SearchTab.Size = new System.Drawing.Size(330, 115);
+            this.SearchTab.Size = new System.Drawing.Size(414, 147);
             this.SearchTab.TabIndex = 1;
             this.SearchTab.Text = "Search";
             this.SearchTab.Enter += new System.EventHandler(this.SearchTab_Enter);
@@ -225,19 +225,19 @@
             // FirstOrLastNameLabel
             // 
             this.FirstOrLastNameLabel.AutoSize = true;
-            this.FirstOrLastNameLabel.Location = new System.Drawing.Point(29, 9);
+            this.FirstOrLastNameLabel.Location = new System.Drawing.Point(36, 11);
             this.FirstOrLastNameLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.FirstOrLastNameLabel.Name = "FirstOrLastNameLabel";
-            this.FirstOrLastNameLabel.Size = new System.Drawing.Size(86, 13);
+            this.FirstOrLastNameLabel.Size = new System.Drawing.Size(117, 17);
             this.FirstOrLastNameLabel.TabIndex = 1;
             this.FirstOrLastNameLabel.Text = "First or last name";
             // 
             // SearchTextBox
             // 
-            this.SearchTextBox.Location = new System.Drawing.Point(28, 25);
+            this.SearchTextBox.Location = new System.Drawing.Point(35, 31);
             this.SearchTextBox.Margin = new System.Windows.Forms.Padding(2);
             this.SearchTextBox.Name = "SearchTextBox";
-            this.SearchTextBox.Size = new System.Drawing.Size(159, 20);
+            this.SearchTextBox.Size = new System.Drawing.Size(198, 22);
             this.SearchTextBox.TabIndex = 0;
             this.SearchTextBox.Click += new System.EventHandler(this.SearchTextBox_Click);
             this.SearchTextBox.TextChanged += new System.EventHandler(this.SearchTextBox_TextChanged);
@@ -245,11 +245,11 @@
             // PersonGroupBox
             // 
             this.PersonGroupBox.Controls.Add(this.PersonListBox);
-            this.PersonGroupBox.Location = new System.Drawing.Point(10, 155);
+            this.PersonGroupBox.Location = new System.Drawing.Point(12, 194);
             this.PersonGroupBox.Margin = new System.Windows.Forms.Padding(2);
             this.PersonGroupBox.Name = "PersonGroupBox";
             this.PersonGroupBox.Padding = new System.Windows.Forms.Padding(2);
-            this.PersonGroupBox.Size = new System.Drawing.Size(336, 277);
+            this.PersonGroupBox.Size = new System.Drawing.Size(420, 346);
             this.PersonGroupBox.TabIndex = 1;
             this.PersonGroupBox.TabStop = false;
             this.PersonGroupBox.Text = "Persons";
@@ -257,10 +257,10 @@
             // RemoveAllButton
             // 
             this.RemoveAllButton.Enabled = false;
-            this.RemoveAllButton.Location = new System.Drawing.Point(242, 446);
+            this.RemoveAllButton.Location = new System.Drawing.Point(302, 558);
             this.RemoveAllButton.Margin = new System.Windows.Forms.Padding(2);
             this.RemoveAllButton.Name = "RemoveAllButton";
-            this.RemoveAllButton.Size = new System.Drawing.Size(72, 20);
+            this.RemoveAllButton.Size = new System.Drawing.Size(90, 25);
             this.RemoveAllButton.TabIndex = 3;
             this.RemoveAllButton.Text = "Remove All";
             this.RemoveAllButton.UseVisualStyleBackColor = true;
@@ -268,9 +268,9 @@
             // 
             // Form1
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(96F, 96F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(120F, 120F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
-            this.ClientSize = new System.Drawing.Size(357, 475);
+            this.ClientSize = new System.Drawing.Size(446, 594);
             this.Controls.Add(this.RemoveAllButton);
             this.Controls.Add(this.TabControlWindow);
             this.Controls.Add(this.RemoveButton);
