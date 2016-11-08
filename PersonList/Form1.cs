@@ -113,6 +113,7 @@ namespace PersonList
             {
                 m1.MakeABaby((Person)PersonListBox.SelectedItems[0], (Person)PersonListBox.SelectedItems[1]);
                 peopleList.Add(m1.NewBaby);
+                CustomMessageBox.ShowBox("Hi-dilly-ho, neighborinhos!\n\nI've done everything the Bible says,\neven the stuff that contradicts \nthe other stuff.\n\nAnd now we're having a baby!");
             }           
             UpdateListBox();
             PersonListBox.ClearSelected();
