@@ -102,6 +102,46 @@ namespace PersonList
             }
         }
 
+        private void SortButton_Click(object sender, EventArgs e)
+        {
+            peopleList.Sort();
+            UpdateListBox();
+        }
+
+        private void MergeButton_Click(object sender, EventArgs e)
+        {
+            if (PersonListBox.SelectedItems.Count == 2)
+            {
+                m1.MakeABaby((Person)PersonListBox.SelectedItems[0], (Person)PersonListBox.SelectedItems[1]);
+            }
+            peopleList.Add(m1.newBaby);
+            UpdateListBox();
+            PersonListBox.ClearSelected();
+            //else
+            //    MessageBox.Show("Select some parents to make a baby!", "Whose your Daddy?");
+        }
+
+        #region LiveSearch
+        /// <summary>
+        /// Live search is here!
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void SearchTextBox_TextChanged(object sender, EventArgs e)
+        {
+            // known cevat:
+            // cant remove people in the list while searching.
+            PersonListBox.DataSource = new BindingList<Person>(peopleList.Where(m => m.ToString().Contains(SearchTextBox.Text)).ToList());
+
+            UpdateListBox();
+        }
+
+        private void TabControlWindow_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            PersonListBox.DataSource = peopleList;
+        }
+        #endregion
+
         #region textboxClearandSelectionEntry
         //lets discuss how these button clearing should work
         private void FirstNameTextBox_Click(object sender, EventArgs e)
@@ -129,39 +169,5 @@ namespace PersonList
             SearchTextBox.Select();
         }
         #endregion
-
-        private void SortButton_Click(object sender, EventArgs e)
-        {
-            peopleList.Sort();
-            UpdateListBox();
-        }
-
-        private void SearchTextBox_TextChanged(object sender, EventArgs e)
-        {
-            //Live search is here!
-            //known cevat:
-            //cant remove people in the list while searching.
-            PersonListBox.DataSource = new BindingList<Person>(peopleList.Where(m => m.ToString().Contains(SearchTextBox.Text)).ToList());
-
-            UpdateListBox();
-        }
-
-        private void MergeButton_Click(object sender, EventArgs e)
-        {
-            if (PersonListBox.SelectedItems.Count == 2)
-            {
-                m1.MakeABaby((Person)PersonListBox.SelectedItems[0], (Person)PersonListBox.SelectedItems[1]);
-            }
-            peopleList.Add(m1.newBaby);
-            UpdateListBox();
-            PersonListBox.ClearSelected();
-            //else
-            //    MessageBox.Show("Select some parents to make a baby!", "Whose your Daddy?");
-        }
-
-        private void TabControlWindow_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            PersonListBox.DataSource = peopleList;
-        }
     }
 }
