@@ -37,7 +37,7 @@ namespace PersonList
         public static Child operator +(Person parent1, Person parent2)
         {
             Child newChild = new Child(0,"", "");
-
+           
             switch (parent1._titleNr)
             {
                 case 1:// Mr

@@ -33,7 +33,7 @@ namespace PersonList
 
             //now the Add button wont do anything until ether male or female is checked
             if ((FemaleButton.Checked == false) && (MaleButton.Checked == false))
-                MessageBox.Show("Please select either Male or Female", "Nobody Selected");
+                CustomMessageBox.ShowBox("Please select either Male or Female\n\nNobody Selected!");
             else if (FemaleButton.Checked && m1.CheckInput())
             {
                 peopleList.Add(new Female(2, FirstNameTextBox.Text, LastNameTextBox.Text));
@@ -48,7 +48,7 @@ namespace PersonList
             }
             else
             {
-                MessageBox.Show("Please enter a name", "What's in a name?");
+                CustomMessageBox.ShowBox("Everybody needs a name...\n\nWhere's yours?");
             }
             UpdateListBox();
             PersonListBox.ClearSelected();
@@ -106,7 +106,12 @@ namespace PersonList
         {
             if (PersonListBox.SelectedItems.Count >= 3)
             {
-                MessageBox.Show("Only two people make a baby!", "Do the maths..");
+                CustomMessageBox.ShowBox("Only two people make a baby!\n\nDo the maths..");
+                PersonListBox.ClearSelected();
+            }
+            if ((Person)PersonListBox.SelectedItems[0] == (Person)PersonListBox.SelectedItems[0])
+            {
+                CustomMessageBox.ShowBox("You need a boy and a girl to\nmake babies!\n\nDidn't they teach you anything\nat school?");
                 PersonListBox.ClearSelected();
             }
            else if (PersonListBox.SelectedItems.Count == 2)
