@@ -38,13 +38,13 @@ namespace PersonList
             {
                 peopleList.Add(new Female(2, FirstNameTextBox.Text, LastNameTextBox.Text));
                 RemoveButton.Enabled = true;
-                RemoveAllButton.Enabled = true;
+                ClearAllButton.Enabled = true;
             }
             else if (MaleButton.Checked && m1.CheckInput())
             {
                 peopleList.Add(new Male(1, FirstNameTextBox.Text, LastNameTextBox.Text));
                 RemoveButton.Enabled = true;
-                RemoveAllButton.Enabled = true;
+                ClearAllButton.Enabled = true;
             }
             else
             {
@@ -64,7 +64,7 @@ namespace PersonList
             PersonListBox.ClearSelected();
         }
 
-        private void RemoveAllButton_Click(object sender, EventArgs e)
+        private void ClearAllButton_Click(object sender, EventArgs e)
         {
             peopleList.Clear();
             UpdateListBox();
@@ -82,7 +82,7 @@ namespace PersonList
             if (peopleList.Count == 0)
             {
                 RemoveButton.Enabled = false;
-                RemoveAllButton.Enabled = false;
+                ClearAllButton.Enabled = false;
                 MaleButton.Checked = false;
                 FemaleButton.Checked = false;
                 FirstNameTextBox.Clear();
@@ -92,7 +92,7 @@ namespace PersonList
             else
             {
                 RemoveButton.Enabled = true;
-                RemoveAllButton.Enabled = true;
+                ClearAllButton.Enabled = true;
             }
         }
 
