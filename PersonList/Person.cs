@@ -73,21 +73,25 @@ namespace PersonList
         {
             Child newChild = new Child(0,"", "");
 
-            if (parent1._title == 1)
+            switch (parent1._title)
             {
-                newChild._firstName = parent1._firstName;
-                newChild._lastName = parent2._lastName;
-                newChild._title = 5;
+                case 1:// Mr
+                    newChild._firstName = parent2._firstName;
+                    newChild._lastName = parent1._lastName;
+                    newChild._title = 3;
+                    break;
+
+                case 2:// Mrs
+                    newChild._firstName = parent2._firstName;
+                    newChild._lastName = parent1._lastName;
+                    newChild._title = 4;
+                    break;
             }
-            else
-            {
-                newChild._firstName = parent2._firstName;
-                newChild._lastName = parent1._lastName;
-                newChild._title = 4;
-            }
+            
+            
             return newChild;
         }
 
-        private enum Titles { Null, Mr, Mrs, Ms, Miss, Master }
+        private enum Titles { Null, Mr, Mrs, Miss, Master }
     }
 }
