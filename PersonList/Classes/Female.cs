@@ -6,11 +6,11 @@ using System.Threading.Tasks;
 
 namespace PersonList
 {
-    public class Male : Person
+    public class Female : Person
     {
-        public Male(int TitleNr, string FirstName, string LastName)
+        public Female(Titles TitleNr, string FirstName, string LastName) //Female constructor
             : base(TitleNr, FirstName, LastName)
-        {
-        }     
+        {   
+        }
     }
 }

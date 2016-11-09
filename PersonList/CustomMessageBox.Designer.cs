@@ -58,6 +58,7 @@
             // 
             // Okbutton
             // 
+            this.Okbutton.Font = new System.Drawing.Font("Comic Sans MS", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Okbutton.ForeColor = System.Drawing.Color.Black;
             this.Okbutton.Location = new System.Drawing.Point(374, 398);
             this.Okbutton.Name = "Okbutton";

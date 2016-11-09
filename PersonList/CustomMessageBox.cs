@@ -10,8 +10,13 @@ using System.Windows.Forms;
 
 namespace PersonList
 {
+    /// <summary>
+    /// Custom Message Box so that we can use it in all the classes througout the program.
+    /// Also because we could then add our own image and functions.
+    /// </summary>
     public partial class CustomMessageBox : Form
     {
+        //variables
         static CustomMessageBox newMessageBox;
         static string Button_id;
 
@@ -32,7 +37,8 @@ namespace PersonList
             newMessageBox.ShowDialog();
             return Button_id;
         }
-        //
+        //another custom Show() method to include a title on the box (otherwise it uses the class name as the title)
+        //- decided to remove outer rim of box and so the title too. Looks nicer!
         public static string ShowBox(string textMessage, string textTitle)
         {
             newMessageBox = new CustomMessageBox();
@@ -41,7 +47,7 @@ namespace PersonList
             newMessageBox.ShowDialog();
             return Button_id;
         }
-
+        //button control
         private void Okbutton_Click(object sender, EventArgs e)
         {
             Button_id = "1";

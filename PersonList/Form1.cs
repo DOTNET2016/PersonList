@@ -12,12 +12,16 @@ namespace PersonList
 {
     public partial class Form1 : Form
     {
+        //New object of Mission Control to give us access to its methods
         MissionControl m1 = new MissionControl();
+        //The List
         List<Person> peopleList = new List<Person>();
 
         public Form1()
         {
             InitializeComponent();
+            //Binding the List to the ListBox so that when we remove/add
+            //items they are removed/added from/to both the listbox and the List
             PersonListBox.DataSource = peopleList;
         }
 
@@ -25,7 +29,7 @@ namespace PersonList
         {
 
         }
-
+        //Add Button to add to add a person to the listbox
         private void AddButton_Click(object sender, EventArgs e)
         {
             m1.FirstName = FirstNameTextBox.Text;
@@ -36,13 +40,13 @@ namespace PersonList
                 CustomMessageBox.ShowBox("Please select either Male or Female\n\nNobody Selected!");
             else if (FemaleButton.Checked && m1.CheckInput())
             {
-                peopleList.Add(new Female(2, FirstNameTextBox.Text, LastNameTextBox.Text));
+                peopleList.Add(new Female(Titles.Mrs, FirstNameTextBox.Text, LastNameTextBox.Text));
                 RemoveButton.Enabled = true;
                 ClearAllButton.Enabled = true;
             }
             else if (MaleButton.Checked && m1.CheckInput())
             {
-                peopleList.Add(new Male(1, FirstNameTextBox.Text, LastNameTextBox.Text));
+                peopleList.Add(new Male(Titles.Mr, FirstNameTextBox.Text, LastNameTextBox.Text));
                 RemoveButton.Enabled = true;
                 ClearAllButton.Enabled = true;
             }
@@ -52,7 +56,7 @@ namespace PersonList
             }
             UpdateListBox();
         }
-
+        //remove selected people from listbox
         private void RemoveButton_Click(object sender, EventArgs e)
         {
             for (var i = PersonListBox.SelectedIndices.Count - 1; i >= 0; i--)
@@ -61,16 +65,17 @@ namespace PersonList
             UpdateListBox();
             UpdateButtons();
         }
-
+        //Clear the listbox/List
         private void ClearAllButton_Click(object sender, EventArgs e)
         {
             peopleList.Clear();
             UpdateListBox();
             UpdateButtons();
         }
-
+        //method to update the listBox
         private void UpdateListBox()
         {
+            //Currency Manager used to keep the data from the listbox and the List synchronised
             ((CurrencyManager)PersonListBox.BindingContext[peopleList]).Refresh();
             PersonListBox.ClearSelected();
         }
@@ -102,22 +107,34 @@ namespace PersonList
 
         private void MergeButton_Click(object sender, EventArgs e)
         {
+            //controls if more than one person is selected to merge or less than two
             if (PersonListBox.SelectedItems.Count >= 3 || PersonListBox.SelectedItems.Count < 2)
             {
                 CustomMessageBox.ShowBox("Only two people make a baby!\n\nDo the maths..");
                 PersonListBox.ClearSelected();
             }
-            else if ((Person)PersonListBox.SelectedItems[0] == (Person)PersonListBox.SelectedItems[1])
+            //controls so that different sexes can make a baby and not two men or two women
+            if ((Person)PersonListBox.SelectedItems[0] == (Person)PersonListBox.SelectedItems[1])
             {
                 CustomMessageBox.ShowBox("You need a boy and a girl to\nmake babies!\n\nDidn't they teach you anything\nat school?");
                 PersonListBox.ClearSelected();
             }
-           else if (PersonListBox.SelectedItems.Count == 2)
+            //once two people are selected ....
+            else if (PersonListBox.SelectedItems.Count == 2)
             {
-                m1.MakeABaby((Person)PersonListBox.SelectedItems[0], (Person)PersonListBox.SelectedItems[1]);
-                peopleList.Add(m1.NewBaby);
-                CustomMessageBox.ShowBox("Hi-dilly-ho, neighborinhos!\n\nI've done everything the Bible says,\neven the stuff that contradicts \nthe other stuff.\n\nAnd now we're having a baby!");
-            }           
+                //checks with a method that the two selected people are adults
+                if (m1.CheckInsest((Person)PersonListBox.SelectedItems[0], (Person)PersonListBox.SelectedItems[1]))
+                {
+                    // No Merge!
+                    PersonListBox.ClearSelected();
+                }               
+                else
+                {   //uses a method to make a new baby(child)
+                    m1.MakeABaby((Person)PersonListBox.SelectedItems[0], (Person)PersonListBox.SelectedItems[1]);
+                    peopleList.Add(m1.NewBaby);
+                    CustomMessageBox.ShowBox("Hi-dilly-ho, neighborinhos!\n\nI've done everything the Bible says,\neven the stuff that contradicts \nthe other stuff.\n\nAnd now we're having a baby!");
+                }
+            }                
             UpdateListBox();
         }
 

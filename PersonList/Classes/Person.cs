@@ -8,21 +8,21 @@ namespace PersonList
 {
     public abstract class Person : IComparable<Person>
     {
+        //variables
         private string _firstName;
         private string _lastName;
-        private int _titleNr;
+        public Titles _titleNr;
 
-
-        public Person(int TitleNr, string FirstName, string LastName)//constructor
+        public Person(Titles TitleNr, string FirstName, string LastName)//Person constructor
         {
             _firstName = FirstName;
             _lastName = LastName;
             _titleNr = TitleNr;
         }
-
+        //override of the string method
         public override string ToString()
         {
-            return ((Titles)_titleNr) + ". " + _firstName + " " + _lastName;
+            return (_titleNr) + ". " + _firstName + " " + _lastName;
         }
         
         public int CompareTo(Person other)
@@ -35,22 +35,23 @@ namespace PersonList
         }
 
         public static Child operator +(Person parent1, Person parent2)
-        {
-            Child newChild = new Child(3,"", "");
-           
+        {   //new child object
+            Child newChild = new Child(Titles.Child, "", "");
+            //decides which order the childs names should be
             switch (parent1._titleNr)
             {
-                case 1:// Mr
+                case Titles.Mr:// Mr
                     newChild._firstName = parent2._firstName;
                     newChild._lastName = parent1._lastName;
-                    break;
-                case 2:// Mrs
+                    break;                 
+                case Titles.Mrs:// Mrs
                     newChild._firstName = parent2._firstName;
                     newChild._lastName = parent1._lastName;
                     break;
             }
             return newChild;
         }
-        private enum Titles { Null, Mr, Mrs, Child }
     }
+    //global enums to be used throughout the program
+    public enum Titles { Null, Mr, Mrs, Child }
 }
