@@ -21,11 +21,6 @@ namespace PersonList
             PersonListBox.DataSource = peopleList;
         }
 
-        private void Form1_Load(object sender, EventArgs e)
-        {
-
-        }
-
         private void AddButton_Click(object sender, EventArgs e)
         {
             m1.FirstName = FirstNameTextBox.Text;
@@ -53,6 +48,7 @@ namespace PersonList
             UpdateListBox();
         }
 
+        //Removes item from list
         private void RemoveButton_Click(object sender, EventArgs e)
         {
             for (var i = PersonListBox.SelectedIndices.Count - 1; i >= 0; i--)
@@ -62,6 +58,7 @@ namespace PersonList
             UpdateButtons();
         }
 
+        //Clears the list
         private void ClearAllButton_Click(object sender, EventArgs e)
         {
             peopleList.Clear();
@@ -69,12 +66,14 @@ namespace PersonList
             UpdateButtons();
         }
 
+        //this will update the listbox when called
         private void UpdateListBox()
         {
             ((CurrencyManager)PersonListBox.BindingContext[peopleList]).Refresh();
             PersonListBox.ClearSelected();
         }
 
+        //When called it will update the buttons
         private void UpdateButtons()
         {
             if (peopleList.Count == 0)
@@ -94,12 +93,14 @@ namespace PersonList
             }
         }
 
+        //Sorts the list
         private void SortButton_Click(object sender, EventArgs e)
         {
             peopleList.Sort();
             UpdateListBox();
         }
 
+        //Select two items in the list and merge them, the outcome will be a child
         private void MergeButton_Click(object sender, EventArgs e)
         {
             if (PersonListBox.SelectedItems.Count >= 3 || PersonListBox.SelectedItems.Count < 2)
@@ -137,6 +138,7 @@ namespace PersonList
             UpdateListBox();
         }
 
+        //When going back to "new person" the data source will be set back to old list
         private void TabControlWindow_SelectedIndexChanged(object sender, EventArgs e)
         {
             PersonListBox.DataSource = peopleList;
